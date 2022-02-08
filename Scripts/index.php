@@ -7,6 +7,6 @@
     <title>Fichero de prueba</title>
 </head>
 <body>
-    <h1>Fichero a Borrar</h1>
+    <h1>Fichero a Borrar.</h1>
 </body>
 </html>
