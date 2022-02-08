@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fichero de prueba</title>
+    <title>JC 2022 - Puntuaciones</title>
 </head>
 <body>
-    <h1>Fichero a Borrar</h1>
+    Pendiente de Modificar.
 </body>
 </html>
