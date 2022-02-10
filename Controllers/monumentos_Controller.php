@@ -19,6 +19,7 @@ function ruleta(){
     require "Models/clases_Model.php"; 
 
     // Enviar por POST el número de opciones de la ruleta del "login" del Inicio.
+    // La clase, para no perderla, se podría guardar en Cookies
 
     // Con ese número, configurar la ruleta en otra función
 
