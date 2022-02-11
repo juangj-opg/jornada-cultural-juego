@@ -17,7 +17,7 @@
 
     <div class="row">
         <div class="col-lg-12 text-center">
-            <div class="titular">JUEGO DEL AHORCADO</div>
+            <div class="titular text-light">El conejo ahorcado</div>
         </div>
     </div>
 
@@ -132,7 +132,7 @@
         .btn {
             margin-top: 30px;
             padding: 10px 10px;
-            font-size: 36px;
+            font-size: 32px;
             border-radius: 30px;
             width: 300px;
             font-style: bold;
