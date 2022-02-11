@@ -13,49 +13,69 @@
 </head>
 
 <body>
-    Pendiente de Modificar.
-    <!-- Pantalla de Login fp -->
+    <!-- Formulario Login Kid-->
 
     <div class="row">
+        <div class="col-lg-12 text-center">
+            <div class="titular">JUEGO DEL AHORCADO</div>
+        </div>
+    </div>
 
-        <div class="col-lg-6">
-            <div class="login-form" style="border: solid black 1px;">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="login-form">
                 <form action="/examples/actions/confirmation.php" method="post">
                     <div class="form-group">
-                        <input type="text" pattern="[a-Z]" class="form-control" placeholder="Introduce tu nombre" required="required">
-                        <small id="emailHelp" class="form-text text-muted">* No es necesario apellido</small>
+                        <input type="text" pattern="[a-Z]" class="form-control" placeholder="Introduce tu nombre!" required="required">
                     </div>
-                    <div class="form-group">
-                        <select name="clase" class="form-control" placeholder="Clase.." required="required">
-                        <small id="rankingHelp" class="form-text text-muted">* ¡Hay ranking de los mejores!</small>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block"><div id = "play">JUGAR</div></button>
 
+                    <div class="form-group">
+                        <select name="clase" class="form-control" placeholder="Clase..." required="required">
+                            <option hidden selected>Clase</option>
+                        </select>
+                        <small id="emailHelp">* ¡Hay un ranking con las mejores clases!</small>
                     </div>
+
+
+                    <div class="d-flex justify-content-center">
+                        <button type="button" id="jugar" class="btn btn-danger">JUGAR</button>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="button" id="instrucciones" class="btn btn-primary">INSTRUCCIONES</button>
+                    </div>
+
 
                 </form>
-                <p class="text-center"><a href="#"></a></p>
             </div>
-
-            <p><a class="btn btn-outline-success" href="#">View details »</a></p>
         </div>
 
         <!-- SIMPLIFICAR EN IMG CLASICO? -->
-        <div class = "cajawapa">
-        <div class="col-lg-3">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">                
-                <rect width="100%" height="100%" fill="#777" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#5a6165;"></rect><text x="50%" y="50%" fill="#777" dy=".3em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#9d9488;">140x140</text>
-                <image height="140" width="140" xlink:href="https://amaga.es/image/cache/catalog/productos/banderas%20y%20mastiles/banderas%20autonomicas/andalucia-800x800.jpg" clip-path="url(#myCircle)" />                
-            </svg>
-            <p>¡El ahorcado andaluz!</p>
-            <p>Este juego tiene una palabra pensada, relacionada con una provincia andaluza...</p>
-            <p>¡Pero deberás de adivinarla!</p>
-            <p>Puedes usar una pista</p>
-            </p>
+        <div class="cajawapa" style="display: none;">
+            <div class="col-xs-3 center-block">
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#5a6165;"></rect><text x="50%" y="50%" fill="#777" dy=".3em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#9d9488;">140x140</text>
+                    <image height="140" width="140" xlink:href="https://amaga.es/image/cache/catalog/productos/banderas%20y%20mastiles/banderas%20autonomicas/andalucia-800x800.jpg" clip-path="url(#myCircle)" />
+                </svg> elkiwi además de una fruta es un tipo de ave 
+                <br>
+                <br>
+                <div class="guia">
+                    <p><b>¡El mítico ahorcado... en andaluz!</b></p>
+                    <p>¡Gira la ruleta!</p>
+                    <p>Debes adivinar un monumento de esa ciudad andaluza...</p>
+                    <p>¡Pero deberás de hacerlo letra a letra!</p>
+                    <p>Pulsa en una letra para intentar acertarlo</p>
+                    <p>Puedes usar una pista ;)</p>
+                </div>
+                </p>
+            </div>
         </div>
-</div>
+
+        <script>
+            $("#instrucciones").click(function() {
+                $(".cajawapa").toggle('slow');
+            });
+        </script>
 
         <!-- <div class = "col-lg-1">
         <div>Instrucciones</div>
@@ -74,24 +94,29 @@
     <style>
         body {
             padding: 100px;
-            background-image: url("https://wallpaperaccess.com/full/1631263.jpg");
+            background-image: url("https://www.visitasevilla.es/sites/default/files/extended_page/img_header/plaza_espana_sevilla_0.jpg");
             background-color: #cccccc;
         }
 
         .login-form {
-            padding: 10px;
             border-radius: 1%;
+            border-width: 4px;
+            border-style: solid;
+            background-color: yellow;
+            padding: 50px;
         }
 
         .cajawapa {
+            font-size: 20px;
             border-radius: 1%;
             border-width: 2px;
             border-style: solid;
+            background-color: green;
             padding: 50px;
         }
 
         .form-control {
-            font-size: 48px;
+            font-size: 54px;
         }
 
         .login-form {
@@ -104,10 +129,35 @@
             width: 150px;
         }
 
-        #play {
-            font-size: 48px;
+        .btn {
+            margin-top: 30px;
+            padding: 10px 10px;
+            font-size: 36px;
+            border-radius: 30px;
+            width: 300px;
+            font-style: bold;
         }
-    
+
+        small {
+            font-size: 18px;
+            color: red;
+            font-style: bold;
+        }
+
+        .titular {
+            font-size: 54px;
+            color: black;
+            padding: 15px;
+            background-color: black;
+            margin-bottom: 30px;
+            margin-top: -50px;
+            border-radius: 20px;
+        }
+
+        .guia {
+            font-size: 24px;
+            text-align: center;
+        }
     </style>
 
 </body>
