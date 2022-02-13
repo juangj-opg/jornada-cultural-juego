@@ -31,7 +31,10 @@
 
                     <div class="form-group">
                         <select name="clase" style = "background-color: white"  class="form-control text-center" placeholder="Clase..." required="required">
-                            <option hidden selected>Seleccionar curso </option>
+                            <option value="vacio" selected disabled> Elige tu clase </option>
+                            <?php foreach($clases as $clase):?>
+                            <option value="<?php echo $clase['id']; ?>"><?php echo $clase['clase']; ?></option>
+                            <?php endforeach; ?>
                         </select>
                         <small id="emailHelp"><br>* ¡Hay un ranking con las mejores clases! 🥇🥈🥉</small>
                     </div>
