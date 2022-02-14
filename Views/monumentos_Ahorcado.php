@@ -15,6 +15,15 @@
         background-image: url("https://www.visitasevilla.es/sites/default/files/extended_page/img_header/plaza_espana_sevilla_0.jpg");
         background-color: #cccccc;
     }
+
+    .muñeco {
+        width: 300px;
+    }
+
+    .opacity-3 {
+        opacity: 0.6 !important;
+    }
+
 </style>
 
 <body>
@@ -29,27 +38,33 @@
             El conejo ahorcado
         </h1>
         <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2">Login</button>
             <button type="button" class="btn btn-dark me-5">Cerrar sesión</button>
         </div>
     </header>
 
-
     <div class="container">
-
         <div class="row">
             <!--palabra-->
-            <div class="col-12 col-md-6 col-lg-4 text-center mb-4 ">
-                <div class="card p-3 mb-4 ">
+            <div class="col-12 col-md-8 col-lg-6 text-center text-light mb-4 ">
+                <div class="card p-3 bg-dark bg-opacity-70">
                     <div class="card-body ">
-                        
                         <p>P_A_L_A_B_R_A</p>
                     </div>
                 </div>
             </div>
+            <!--muñeco-->
+            <div class="col-12 col-md-8 col-lg-6 text-center mb-4 ">
+                <div class="card p-3 mb-4 bg-dark bg-opacity-50">
+                    <div class="card-body ">
+                        <img class="muñeco" src="https://img2.freepng.es/20180612/que/kisspng-i-cannot-think-of-any-need-in-childhood-as-strong-5b1f4ffd1ccaa9.6331508815287787491179.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <!--teclado-->
-            <div class="col-12 col-md-6 col-lg-4 text-center mb-4 ">
-                <div class="card p-3 mb-4 ">
+            <div class="col-12 col-md-8 col-lg-12 text-center mb-4 ">
+                <div class="card p-3 mb-4 bg-dark bg-opacity-50">
                     <div class="card-body ">
                         <div id="virtual-keyboard">
                             <div class="keyboard-row">
@@ -89,24 +104,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <!--muñeco-->
-            <div class="col-12 col-md-6 col-lg-2 text-center mb-4 ">
-                <div class="card p-3 mb-4 ">
-                    <div class="card-body ">
-                        <P>M</P>
-                        <P>u</P>
-                        <P>Ñ</P>
-                        <P>E</P>
-                        <P>C</P>
-                        <P>O</P>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
+    </div>
 </body>
 
 </html>
