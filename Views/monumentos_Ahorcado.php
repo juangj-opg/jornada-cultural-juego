@@ -19,6 +19,11 @@
     .muñeco {
         width: 300px;
     }
+
+    .cuadro {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
 </style>
 
 <body>
@@ -26,14 +31,21 @@
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
         <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                <use xlink:href="#bootstrap" />
+                <use xlink:href="#bootstrap"/>
             </svg>
         </a>
         <h1 class="col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             El conejo ahorcado
         </h1>
-        <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-dark me-5">Cerrar sesión</button>
+        <div class="dropdown text-end me-5">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://cdn-icons-png.flaticon.com/512/802/802338.png" alt="mdo" width="52" height="52" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu fs-3 text-center">
+            <li><a class="dropdown-item" href="#">Jugar de nuevo</a></li>           
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Salir</a></li>
+          </ul>
         </div>
     </header>
 
@@ -49,16 +61,16 @@
             </div>
             <!--muñeco-->
             <div class="col-12 col-md-8 col-lg-6 text-center mb-4 ">
-                <div class="card p-3 mb-4 bg-dark bg-opacity-50">
-                    <div class="card-body ">
+                <div class="cuadro card p-3 mb-4 bg-dark bg-opacity-50">
+                    <div class="card-body">
                         <img class="muñeco" src="https://img2.freepng.es/20180612/que/kisspng-i-cannot-think-of-any-need-in-childhood-as-strong-5b1f4ffd1ccaa9.6331508815287787491179.jpg" alt="">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <!--teclado-->
-            <div class="col-12 col-md-8 col-lg-12 text-center mb-4 ">
+            <div class="col-12 col-md-8 col-lg-6 text-center mb-4 ">
                 <div class="card p-3 mb-4 bg-dark bg-opacity-50">
                     <div class="card-body">
                         <div id="virtual-keyboard">
