@@ -19,11 +19,6 @@
     .muñeco {
         width: 300px;
     }
-
-    .opacity-3 {
-        opacity: 0.6 !important;
-    }
-
 </style>
 
 <body>
@@ -45,10 +40,10 @@
     <div class="container">
         <div class="row">
             <!--palabra-->
-            <div class="col-12 col-md-8 col-lg-6 text-center text-light mb-4 ">
-                <div class="card p-3 bg-dark bg-opacity-70">
+            <div class="col-12 col-md-8 col-lg-6 align-self-end text-center text-light mb-4 ">
+                <div class="card p-3 mb-4 bg-dark bg-opacity-70">
                     <div class="card-body ">
-                        <p>P_A_L_A_B_R_A</p>
+                        <h2>P_A_L_A_B_R_A</h2>
                     </div>
                 </div>
             </div>
@@ -65,7 +60,7 @@
             <!--teclado-->
             <div class="col-12 col-md-8 col-lg-12 text-center mb-4 ">
                 <div class="card p-3 mb-4 bg-dark bg-opacity-50">
-                    <div class="card-body ">
+                    <div class="card-body">
                         <div id="virtual-keyboard">
                             <div class="keyboard-row">
                                 <input type="image" src="./images/letras/azul/Letter_Q.png" />
