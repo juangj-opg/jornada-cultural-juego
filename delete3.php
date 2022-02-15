@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-
+            // Lo que se podría hacer, es pasar por Ajax las palabras (monumento) o meterlo en cookies y de esa manera usarlo ya sea con Javascript o PHP.
             $(".letra").click(function() {
                 alert($(this).val());
             });
@@ -34,22 +34,22 @@
                             <div class="keyboard-row">
                                 <input class="letra" type="image" src="./Views/images/letras/azul/Letter_A.png" value="A"/>
                                 <input class="letra" type="image" src="./Views/images/letras/azul/Letter_S.png" value="S"/>
-                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_D.png" />
-                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_F.png" />
-                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_G.png" />
-                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_H.png" />
-                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_J.png" />
-                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_K.png" />
-                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_L.png" />
+                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_D.png" value="D"/>
+                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_F.png" value="F"/>
+                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_G.png" value="G"/>
+                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_H.png" value="H"/>
+                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_J.png" value="J"/>
+                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_K.png" value="K"/>
+                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_L.png" value="L"/>
                             </div>
                             <div class="keyboard-row">
-                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_Z.png" />
-                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_X.png" />
-                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_C.png" />
-                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_V.png" />
-                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_B.png" />
-                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_N.png" />
-                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_M.png" />
+                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_Z.png" value="Z"/>
+                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_X.png" value="X"/>
+                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_C.png" value="C"/>
+                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_V.png" value="V"/>
+                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_B.png" value="B"/>
+                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_N.png" value="N"/>
+                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_M.png" value="M"/>
                             </div>
                         </div>
                     </div>
