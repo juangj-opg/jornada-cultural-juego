@@ -1,13 +1,43 @@
+
+
+
 <html>
 
 <head>
     <title>Movie Selector</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"> </script>
+
 </head>
 
 <body>
 
-    <h1>Listado de Provincias</h1>
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
+        <a class="d-flex align-items-center text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                <use xlink:href="#bootstrap" />
+            </svg>
+        </a>
+        <h1 class="col-12 col-md-auto mb-2 justify-content-center mb-md-0 text-light">
+            El conejo ahorcado
+        </h1>
+        <div class="dropdown text-end me-5">
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://cdn-icons-png.flaticon.com/512/802/802338.png" alt="mdo" width="52" height="52" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu fs-3 text-center">
+                <li><a class="dropdown-item" href="#">Jugar de nuevo</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Salir</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+
     <br>
     <br>
 
@@ -74,7 +104,6 @@
 
     body {
         font-family: Open Sans;
-        display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
@@ -108,7 +137,7 @@
         border-radius: 50%;
         border: 10px solid black;
         overflow: hidden;
-        transition: all ease 3s;
+        transition: all ease 1s;
     }
 
     span {
