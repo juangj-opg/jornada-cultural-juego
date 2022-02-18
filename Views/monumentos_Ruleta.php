@@ -7,27 +7,29 @@
 
 <body>
 
-    <h1> Which movie should I watch?</h1>
+    <h1>Listado de Provincias</h1>
     <br>
     <br>
 
     <div id="mainbox" class="mainbox">
         <div id="box" class="box">
+            <!-- OCCIDENTAL EXAMPLE -->
             <div class="box1">
                 <span class="span1"><b>SEVILLA</b></span>
-                <span class="span2"><b>HUELVA - CÁDIZ</b></span>
-                <span class="span3"><b>GRANADA - MÁLAGA</b></span>
-                <span class="span4"><b>JAÉN - ALMERÍA</b></span>
+                <span class="span2"><b>HUELVA</b></span>
+                <span class="span3"><b>CÓRDOBA</b></span>
+                <span class="span4"><b>CÁDIZ</b></span>
             </div>
+            <!-- ORIENTAL EXAMPLE -->
             <div class="box2">
-                <span class="span1"><b>SEVILLA - CORDOBA</b></span>
-                <span class="span2"><b>HUELVA - CÁDIZ</b></span>
-                <span class="span3"><b>GRANADA - MÁLAGA</b></span>
-                <span class="span4"><b>JAÉN - ALMERÍA</b></span>
+                <span class="span1"><b>MÁLAGA</b></span>
+                <span class="span2"><b>ALMERÍA</b></span>
+                <span class="span3"><b>GRANADA</b></span>
+                <span class="span4"><b>JAÉN</b></span>
             </div>
         </div>
 
-        <button class="spin" onclick="myfunction()">SPIN</button>
+        <button class="spin" onclick="myfunction()">GIRAR</button>
     </div>
 
 
@@ -63,11 +65,6 @@
         outline: none;
     }
 
-    b {
-        font-size: 16px;
-    }
-
-
     body {
         font-family: Open Sans;
         display: flex;
@@ -102,9 +99,9 @@
         height: 100%;
         position: relative;
         border-radius: 50%;
-        border: 10px solid #fff;
+        border: 10px solid black;
         overflow: hidden;
-        transition: all ease 5s;
+        transition: all ease 3s;
     }
 
     span {
@@ -119,6 +116,7 @@
         background-color: #fffb00;
         top: 120px;
         left: 0;
+
     }
 
     .span2 {
@@ -168,7 +166,7 @@
     }
 
     span b {
-        font-size: px;
+        font-size: 24px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -181,8 +179,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 75px;
-        height: 75px;
+        width: 95px;
+        height: 95px;
         border-radius: 50%;
         border: 4px solid #fff;
         background-color: #001aff;
