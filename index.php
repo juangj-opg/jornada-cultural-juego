@@ -24,7 +24,7 @@ if ( !empty ( $_GET [ 'action' ] ) )
     
 // Ya tenemos el controllador y la acción
 // Formamos el nombre del fichero que continee nuestro controlador.
-$controller = CONTROLLERS_FOLDER . $controller . '_controller.php';
+$controller = CONTROLLERS_FOLDER . $controller . '_Controller.php';
 // Si la variable $controller es un fichero lo requerimos
 try{
     if ( is_file ( $controller ) )
