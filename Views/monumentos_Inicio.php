@@ -15,11 +15,7 @@
 <body>
     <!-- Formulario Login Kid-->
 
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <div class="titular text-light">El conejo ahorcado</div>
-        </div>
-    </div>
+    <!-- BANDERA -->
 
     <div class="row">
         <div class="col-md-6">
@@ -57,7 +53,7 @@
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#5a6165;"></rect><text x="50%" y="50%" fill="#777" dy=".3em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#9d9488;">140x140</text>
                     <image height="140" width="140" xlink:href="https://amaga.es/image/cache/catalog/productos/banderas%20y%20mastiles/banderas%20autonomicas/andalucia-800x800.jpg" clip-path="url(#myCircle)" />
-                </svg> elkiwi además de una fruta es un tipo de ave
+                </svg>
                 <br>
                 <br>
                 <div class="guia">
@@ -65,8 +61,8 @@
                     <p>¡Gira la ruleta!</p>
                     <p>Debes adivinar un monumento de esa ciudad andaluza...</p>
                     <p>¡Pero deberás de hacerlo letra a letra!</p>
-                    <p>Pulsa en una letra para intentar acertarlo</p>
-                    <p>Puedes usar una pista ;)</p>
+                    <p>Clickea en una letra para intentar acertarlo</p>
+                    <p>Puedes que haya pistas ;)</p>
                 </div>
                 </p>
             </div>
