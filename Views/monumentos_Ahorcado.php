@@ -10,7 +10,7 @@
     <title>JC 2022 - Ahorcado</title>
 </head>
 <style>
-    body {
+        body {
 
         background-image: url("https://www.visitasevilla.es/sites/default/files/extended_page/img_header/plaza_espana_sevilla_0.jpg");
         background-color: #cccccc;
@@ -28,24 +28,26 @@
 
 <body>
 
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
+        <a class="d-flex align-items-center text-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                <use xlink:href="#bootstrap"/>
+                <use xlink:href="#bootstrap" />
             </svg>
         </a>
-        <h1 class="col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <h1 class="col-12 col-md-auto mb-2 justify-content-center mb-md-0 text-light">
             El conejo ahorcado
         </h1>
         <div class="dropdown text-end me-5">
-          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://cdn-icons-png.flaticon.com/512/802/802338.png" alt="mdo" width="52" height="52" class="rounded-circle">
-          </a>
-          <ul class="dropdown-menu fs-3 text-center">
-            <li><a class="dropdown-item" href="#">Jugar de nuevo</a></li>           
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Salir</a></li>
-          </ul>
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://cdn-icons-png.flaticon.com/512/802/802338.png" alt="mdo" width="52" height="52" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu fs-3 text-center">
+                <li><a class="dropdown-item" href="#">Jugar de nuevo</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Salir</a></li>
+            </ul>
         </div>
     </header>
 
