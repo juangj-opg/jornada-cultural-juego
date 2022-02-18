@@ -52,8 +52,8 @@
     <div class="container">
         <div class="row">
             <!--palabra-->
-            <div class="col-12 col-md-8 col-lg-6 align-self-end text-center text-light mb-4 ">
-                <div class="card p-3 mb-4 bg-dark bg-opacity-70">
+            <div class="col-12 col-md-8 col-lg-6 align-self-end text-center text-dark mb-4 ">
+                <div class="card p-3 mb-4 bg-light bg-opacity-70">
                     <div class="card-body ">
                         <h2>P_A_L_A_B_R_A</h2>
                     </div>
@@ -61,9 +61,9 @@
             </div>
             <!--muñeco-->
             <div class="col-12 col-md-8 col-lg-6 text-center mb-4 ">
-                <div class="cuadro card p-3 mb-4 bg-dark bg-opacity-50">
+                <div class="cuadro card p-3 mb-4 bg-light bg-opacity-50">
                     <div class="card-body">
-                        <img class="muñeco" src="https://img2.freepng.es/20180612/que/kisspng-i-cannot-think-of-any-need-in-childhood-as-strong-5b1f4ffd1ccaa9.6331508815287787491179.jpg" alt="">
+                        <img class="muñeco" src="./images//muñeco//11-conejoCompleto.png" alt="">
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
         <div class="row justify-content-center">
             <!--teclado-->
             <div class="col-12 col-md-8 col-lg-6 text-center mb-4 ">
-                <div class="card p-3 mb-4 bg-dark bg-opacity-50">
+                <div class="card p-3 mb-4 bg-light  bg-opacity-50">
                     <div class="card-body">
                         <div id="virtual-keyboard">
                             <div class="keyboard-row">
