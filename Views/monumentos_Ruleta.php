@@ -1,162 +1,211 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Admin Login</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Movie Selector</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <!-- Formulario Login Kid-->
 
-    <!-- BANDERA -->
+    <h1> Which movie should I watch?</h1>
+    <br>
+    <br>
 
-    <div class="row">
-        <div class="col-md-6">
-            <div class="login-form">
-                <form action="/examples/actions/confirmation.php" method="post">
-                    <div class="form-group">
-                        <input type="text" style = "background-color: white" pattern="[a-Z]" class="form-control text-center" placeholder="Introduce tu nombre" required="required">
-                    </div>
-
-                    <div class="form-group">
-                        <select name="clase" style = "background-color: white"  class="form-control text-center" placeholder="Clase..." required="required">
-                            <option value="vacio" selected disabled> Elige tu clase </option>
-                            <?php foreach($clases as $clase):?>
-                            <option value="<?php echo $clase['id']; ?>"><?php echo $clase['clase']; ?></option>
-                            <?php endforeach; ?>
-                        </select>
-                        <small id="emailHelp"><br>* ¡Hay un ranking con las mejores clases! 🥇🥈🥉</small>
-                    </div>
-
-
-                    <div class="d-flex justify-content-center">
-                        <button type="button" id="jugar" class="btn btn-danger">JUGAR</button>
-                    </div>
-
-                    <div class="d-flex justify-content-center">
-                        <button type="button" id="instrucciones" class="btn btn-primary">INSTRUCCIONES</button>
-                    </div>
-                </form>
+    <div id="mainbox" class="mainbox">
+        <div id="box" class="box">
+            <div class="box1">
+                <span class="span1"><b>SEVILLA</b></span>
+                <span class="span2"><b>HUELVA - CÁDIZ</b></span>
+                <span class="span3"><b>GRANADA - MÁLAGA</b></span>
+                <span class="span4"><b>JAÉN - ALMERÍA</b></span>
+            </div>
+            <div class="box2">
+                <span class="span1"><b>SEVILLA - CORDOBA</b></span>
+                <span class="span2"><b>HUELVA - CÁDIZ</b></span>
+                <span class="span3"><b>GRANADA - MÁLAGA</b></span>
+                <span class="span4"><b>JAÉN - ALMERÍA</b></span>
             </div>
         </div>
 
-        <!-- SIMPLIFICAR EN IMG CLASICO? -->
-        <div class="cajawapa" style="display: none;">
-            <div class="col-xs-3 center-block">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="#777" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#5a6165;"></rect><text x="50%" y="50%" fill="#777" dy=".3em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#9d9488;">140x140</text>
-                    <image height="140" width="140" xlink:href="https://amaga.es/image/cache/catalog/productos/banderas%20y%20mastiles/banderas%20autonomicas/andalucia-800x800.jpg" clip-path="url(#myCircle)" />
-                </svg>
-                <br>
-                <br>
-                <div class="guia">
-                    <p><b>¡El mítico ahorcado... en andaluz!</b></p>
-                    <p>¡Gira la ruleta!</p>
-                    <p>Debes adivinar un monumento de esa ciudad andaluza...</p>
-                    <p>¡Pero deberás de hacerlo letra a letra!</p>
-                    <p>Clickea en una letra para intentar acertarlo</p>
-                    <p>Puedes que haya pistas ;)</p>
-                </div>
-                </p>
-            </div>
-        </div>
-
-        <script>
-            $("#instrucciones").click(function() {
-                $(".cajawapa").toggle('slow');
-            });
-        </script>
-
-        <!-- <div class = "col-lg-1">
-        <div>Instrucciones</div>
-        </div> -->
-
+        <button class="spin" onclick="myfunction()">SPIN</button>
     </div>
 
 
-
-
-
-
-    <!-- Select con PHP -->
-
-
-    <style>
-        body {
-            padding: 100px;
-            background-image: url("https://www.visitasevilla.es/sites/default/files/extended_page/img_header/plaza_espana_sevilla_0.jpg");
-            background-color: #cccccc;
-        }
-
-        .login-form {
-            border-radius: 1%;
-            border-width: 4px;
-            border-style: solid;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/6/63/Flag_of_Andalusia_%28simple%29.svg');
-            padding: 50px;
-        }
-
-        .cajawapa {
-            font-size: 20px;
-            border-radius: 1%;
-            border-width: 2px;
-            border-style: solid;
-            background-color: green;
-            padding: 50px;
-        }
-
-        .form-control {
-            font-size: 38px;
-            padding: 3px;
-    
-        }
-
-        .login-form {
-            background-color: greenyellow;
-            padding: 30px;
-        }
-        
-        .btn {
-            height: 100px;
-            width: 100px;
-            margin-top: 30px;
-            padding: 10px 10px;
-            font-size: 32px;
-            border-radius: 30px;
-            width: 300px;
-            font-style: bold;
-        }
-
-        small {
-            font-size: 18px;
-            color: red;
-            font-style: bold;
-        }
-
-        .titular {
-            font-size: 54px;
-            color: black;
-            padding: 15px;
-            background-color: black;
-            margin-bottom: 30px;
-            margin-top: -50px;
-            border-radius: 20px;
-        }
-
-        .guia {
-            font-size: 24px;
-            text-align: center;
-        }
-
-    </style>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
+
+<script>
+    function myfunction() {
+
+
+        var x = 1024; //min value
+        var y = 9999; // max value
+
+        var deg = Math.floor(Math.random() * (x - y)) + y;
+
+        document.getElementById('box').style.transform = "rotate(" + deg + "deg)";
+
+        var element = document.getElementById('mainbox');
+        element.classList.remove('animate');
+        setTimeout(function() {
+            element.classList.add('animate');
+        }, 1000); //5000 = 5 second
+    }
+</script>
+
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        outline: none;
+    }
+
+    b {
+        font-size: 16px;
+    }
+
+
+    body {
+        font-family: Open Sans;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+        background-image: url("https://www.visitasevilla.es/sites/default/files/extended_page/img_header/plaza_espana_sevilla_0.jpg");
+        background-color: #cccccc;
+    }
+
+    .mainbox {
+        position: relative;
+        width: 500px;
+        height: 500px;
+    }
+
+    .mainbox:after {
+        position: absolute;
+        content: '';
+        width: 32px;
+        height: 32px;
+        background: url('arrow-left.png') no-repeat;
+        background-size: 32px;
+        right: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .box {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 50%;
+        border: 10px solid #fff;
+        overflow: hidden;
+        transition: all ease 5s;
+    }
+
+    span {
+        width: 50%;
+        height: 50%;
+        display: inline-block;
+        position: absolute;
+    }
+
+    .span1 {
+        clip-path: polygon(0 92%, 100% 50%, 0 8%);
+        background-color: #fffb00;
+        top: 120px;
+        left: 0;
+    }
+
+    .span2 {
+        clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+        background-color: #ff4fa1;
+        top: 120px;
+        right: 0;
+    }
+
+    .span3 {
+        clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+        background-color: #ffaa00;
+        bottom: 0;
+        left: 120px;
+    }
+
+    .span4 {
+        clip-path: polygon(50% 100%, 92% 0, 8% 0);
+        background-color: #22ff00;
+        top: 0;
+        left: 120px;
+    }
+
+
+    .box1 .span3 b {
+        transform: translate(-50%, -50%) rotate(-270deg);
+    }
+
+    .box1 .span1 b,
+    .box2 .span1 b {
+        transform: translate(-50%, -50%) rotate(185deg);
+    }
+
+    .box2 .span3 b {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .box1 .span4 b,
+    .box2 .span4 b {
+        transform: translate(-50%, -50%) rotate(-85deg);
+    }
+
+    .box2 {
+        width: 100%;
+        height: 100%;
+        transform: rotate(-135deg);
+    }
+
+    span b {
+        font-size: px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .spin {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        background-color: #001aff;
+        color: #fff;
+        box-shadow: 0 5px 20px #000;
+        font-weight: bold;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .spin:active {
+        width: 70px;
+        height: 70px;
+        font-size: 20px;
+    }
+
+    .mainbox.animate:after {
+        animation: animateArrow 0.7s ease infinite;
+    }
+
+    @keyframes animateArrow {
+        50% {
+            right: -40px;
+        }
+    }
+</style>
