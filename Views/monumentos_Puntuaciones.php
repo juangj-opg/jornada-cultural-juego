@@ -36,6 +36,11 @@
         td {
             width: 120px;
         }
+
+        .ancho{
+            width: 300px;
+        }
+
     </style>
 </head>
 
@@ -58,23 +63,38 @@
                 <li>
                     <hr class="dropdown-divider">
                 </li>
+                <li><a class="dropdown-item" href="#">Ver puntuación</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
                 <li><a class="dropdown-item" href="#">Salir</a></li>
             </ul>
         </div>
     </header>
-    <table>
-        <tr>
-            <th>Nombre</th>
-            <th>Curso</th>
-            <th>Puntuación</th>
-        </tr>
-        <?php foreach ($clases as $clase) : ?>
-            <tr>
-                <td><?php echo $clase['clase']; ?></td>
-                <td><?php echo $clase['puntuacion']; ?></td>
-            </tr>
-        <?php endforeach; ?>
-    </table>
+    <div class="container">
+        <div class="row">
+
+            <table class="bg-light align-items-center">
+                <tr>
+                    <th class = "bg-success">
+                        <h1>Nombre</h1>
+                    </th>
+                    <th class = "bg-success">
+                        <h1>Curso</h1>
+                    </th>
+                    <th class = "ancho bg-success">
+                        <h1 >Puntuación</h1>
+                    </th>
+                </tr>
+                <?php foreach ($clases as $clase) : ?>
+                    <tr>
+                        <td><?php echo $clase['clase']; ?></td>
+                        <td><?php echo $clase['puntuacion']; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        </div>
+    </div>
 </body>
 
 </html>

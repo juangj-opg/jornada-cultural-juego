@@ -28,7 +28,7 @@
 
 <body>
 
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
         <a class="d-flex align-items-center text-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
                 <use xlink:href="#bootstrap" />
@@ -43,6 +43,10 @@
             </a>
             <ul class="dropdown-menu fs-3 text-center">
                 <li><a class="dropdown-item" href="#">Jugar de nuevo</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Ver puntuación</a></li>
                 <li>
                     <hr class="dropdown-divider">
                 </li>
