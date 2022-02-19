@@ -13,7 +13,7 @@
 
 <body>
 
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
         <a class="d-flex align-items-center text-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
                 <use xlink:href="#bootstrap" />
@@ -31,37 +31,39 @@
                 <li>
                     <hr class="dropdown-divider">
                 </li>
+                <li><a class="dropdown-item" href="#">Ver puntuación</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
                 <li><a class="dropdown-item" href="#">Salir</a></li>
             </ul>
         </div>
     </header>
 
+    <!--Contenedor Ruleta-->
+    <div class = "container">
+        
+            <div id="mainbox" class="mainbox text-center">
+            <div id="box" class="box">
 
+                <!-- parte occidental -->
+                <div class="box1">
+                    <span class="span1"><b>SEVILLA</b></span>
+                    <span class="span2"><b>CÁDIZ</b></span>
+                    <span class="span3"><b>CÓRDOBA</b></span>
+                    <span class="span4"><b>HUELVA</b></span>
+                </div>
 
-    <br>
-    <br>
-
-    <div id="mainbox" class="mainbox">
-        <div id="box" class="box">
-            <!-- OCCIDENTAL EXAMPLE -->
-            <div class="box1">
-                <span class="span1"><b>SEVILLA</b></span>
-                <span class="span2"><b>CÁDIZ</b></span>
-                <span class="span3"><b>CÓRDOBA</b></span>
-                <span class="span4"><b>HUELVA</b></span>
-
+                <!-- parte oriental -->
+                <div class="box2">
+                    <span class="span2"><b>MÁLAGA</b></span>
+                    <span class="span1"><b>JAÉN</b></span>
+                    <span class="span3"><b>GRANADA</b></span>
+                    <span class="span4"><b>ALMERÍA</b></span>
+                </div>
             </div>
-            <!-- ORIENTAL EXAMPLE -->
-            <div class="box2">
-                <span class="span2"><b>MÁLAGA</b></span>
-                <span class="span1"><b>JAÉN</b></span>
-                <span class="span3"><b>GRANADA</b></span>
-                <span class="span4"><b>ALMERÍA</b></span>
-
-            </div>
-        </div>
-
-        <button class="spin" id="girar" onclick="myfunction()">GIRAR</button>
+            <button class="spin" id="girar" onclick="myfunction()">GIRAR</button>
+        </div>  
     </div>
 
 
@@ -82,7 +84,9 @@
         var gradosFinales = deg - 1080;
 
         //enviar ciudades  con _POST  ajax
-
+        
+        //evento gira ruleta 
+        document.getElementById('box').style.transition = "all ease 2s";
         document.getElementById('box').style.transform = "rotate(" + deg + "deg)";
         var element = document.getElementById('mainbox');
 
@@ -94,41 +98,27 @@
 </script>
 
 <style>
-    * {
+   /* * {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
         outline: none;
+    }*/
+
+
+    body {        
+        background-size: cover;
     }
 
-
-    body {
-        font-family: Open Sans;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        overflow: hidden;
-        background-image: url("https://www.visitasevilla.es/sites/default/files/extended_page/img_header/plaza_espana_sevilla_0.jpg");
-        background-color: #cccccc;
-    }
-
+    /*Forma de la ruleta*/
     .mainbox {
         position: relative;
         width: 500px;
         height: 500px;
+        
     }
 
-    .mainbox:after {
-        position: absolute;
-        content: '';
-        width: 32px;
-        height: 32px;
-        background: url('arrow-left.png') no-repeat;
-        background-size: 32px;
-        right: -30px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+   
 
     .box {
         width: 100%;
@@ -137,9 +127,10 @@
         border-radius: 50%;
         border: 10px solid black;
         overflow: hidden;
-        transition: all ease 1s;
+        
     }
 
+    /*Opciones de provincias*/
     span {
         width: 50%;
         height: 50%;
@@ -147,6 +138,7 @@
         position: absolute;
     }
 
+    /*Opciones Jaén y Sevilla */
     .span1 {
         clip-path: polygon(0 92%, 100% 50%, 0 8%);
         background-color: green;
@@ -155,6 +147,7 @@
 
     }
 
+    /*Opciones Cádiz y Málaga*/ 
     .span2 {
         clip-path: polygon(100% 92%, 0 50%, 100% 8%);
         background-color: darkgreen;
@@ -162,6 +155,7 @@
         right: 0;
     }
 
+    /*Opciones Amlería y Huelva*/
     .span3 {
         clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
         background-color: greenyellow;
@@ -169,6 +163,7 @@
         left: 120px;
     }
 
+    /*Opciones Granada y Córdoba*/
     .span4 {
         background-color: lime;
         clip-path: polygon(50% 100%, 92% 0, 8% 0);
@@ -176,6 +171,7 @@
         left: 120px;
     }
 
+    /*Rotaciones de texto*/
 
     .box1 .span3 b {
         transform: translate(-50%, -50%) rotate(-270deg);
