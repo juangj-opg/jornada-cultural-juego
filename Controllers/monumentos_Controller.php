@@ -1,20 +1,4 @@
 <?php
-function inicio(){
-    require "Models/clases_Model.php"; 
-
-    $clases = getClases(); // Para recoger el nombre y la ID de las clases
-
-    include "Views/monumentos_Inicio.php";
-}
-
-function puntuaciones(){
-    require "Models/clases_Model.php"; 
-
-    $clases = getClases(); // Para recoger el nombre y la puntuación de cada clase
-
-    include "Views/monumentos_Puntuaciones.php";
-}
-
 function ruleta(){
     require "Models/clases_Model.php"; 
 
