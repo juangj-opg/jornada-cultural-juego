@@ -17,11 +17,43 @@
 
 // Tengo que limpiar código
 
+// -----
 
-$monumento = getMonumento(1);
+// Recoger monumentoso de una provincia
+
+$idProvincia = 2;
+
+$provinciaMonumentos = getMonumentosProvincia($idProvincia);
+$arrayProvincias = [];
+$count = 1;
+
+foreach ($provinciaMonumentos as $monumento) {
+    //echo "<br>".$monumento['monumento'];
+    $monumento = array($count++, $monumento['monumento']);
+    $arrayProvincias[] = $monumento;
+    //echo random_int(1,2);
+}
+
+$contadorMonumentos = count($arrayProvincias);
+
+echo "<br>";
+
+var_dump($arrayProvincias);
+echo "<br><br>";
+
+$randonMonument = random_int(1,$contadorMonumentos);
+
+$monumento = getMonumento($randonMonument);
+var_dump($monumento) ;
 
 
+echo "<br><br>";
 
+// --------
+
+// Conversor palabra a guiones
+
+// $monumento ha sido establecido anteriormente
 
 $nombre =  $monumento['monumento'];
 $count = mb_strlen($nombre);
@@ -57,6 +89,8 @@ foreach ($array as $P) {
 }
 
 echo $palabra;
+
+
 
 
 ?>
