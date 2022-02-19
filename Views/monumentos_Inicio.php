@@ -30,7 +30,7 @@
                     <img src="https://cdn-icons-png.flaticon.com/512/802/802338.png" alt="mdo" width="52" height="52" class="rounded-circle">
                 </a>
                 <ul class="dropdown-menu fs-3 text-center">
-                    <li><a class="dropdown-item" href="#">Jugar de nuevo</a></li>
+                    <li><a class="dropdown-item" href="?action=ruleta">Jugar de nuevo</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
@@ -60,7 +60,7 @@
                             <small id="emailHelp"><br>* ¡Hay un ranking con las mejores clases! 🥇🥈🥉</small>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button type="button" id="jugar" class="btn btn-danger">JUGAR</button>
+                            <a href="?action=ruleta"><button type="button" id="jugar" class="btn btn-danger">JUGAR</button></a>
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">
