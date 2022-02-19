@@ -9,8 +9,73 @@
     <script>
         $(document).ready(function(){
             // Lo que se podría hacer, es pasar por Ajax las palabras (monumento) o meterlo en cookies y de esa manera usarlo ya sea con Javascript o PHP.
+            fallos = 0;
+            palabra = "Andalucia";
+            palabra = palabra.toLowerCase();
             $(".letra").click(function() {
-                alert($(this).val());
+                //alert($(this).val());
+                $letra = $(this).val().toLowerCase();
+                if(palabra.includes($letra)){
+                    $src = './Views/images/letras/verde/Letter_'+$letra.toUpperCase()+'_green.png'
+                    $(this).attr('src', $src);
+                    $(this).prop('disabled', true);
+                } else {
+                    $src = './Views/images/letras/rojo/Letter_'+$letra.toUpperCase()+'_red.png'
+                    $(this).attr('src', $src);
+                    $(this).prop('disabled', true);
+                    fallos++;
+                }
+
+                switch(fallos) {
+                    case 0:
+                        $url = "./Views/images/muñeco/1-suelo.png"
+                        $("#muñeco").attr('src', $url);
+                        break;
+                    case 1:
+                        $url = "./Views/images/muñeco/2-poster.png"
+                        $("#muñeco").attr('src', $url);
+                        break;
+                    case 2:
+                        $url = "./Views/images/muñeco/3-soporte.png"
+                        $("#muñeco").attr('src', $url);
+                        break;
+                    case 3:
+                        $url = "./Views/images/muñeco/4-soga.png"
+                        $("#muñeco").attr('src', $url);
+                        break;
+                    case 4:
+                        $url = "./Views/images/muñeco/5-cabeza.png"
+                        $("#muñeco").attr('src', $url);
+                        break;
+                    case 5:
+                        $url = "./Views/images/muñeco/6-cuerpo.png"
+                        $("#muñeco").attr('src', $url);
+                        break;
+                    case 6:
+                        $url = "./Views/images/muñeco/7-brazoIzq.png"
+                        $("#muñeco").attr('src', $url);
+                        break;
+                    case 7:
+                        $url = "./Views/images/muñeco/8-brazoDer.png"
+                        $("#muñeco").attr('src', $url);
+                        break;
+                    case 8:
+                        $url = "./Views/images/muñeco/9-pieIzq.png"
+                        $("#muñeco").attr('src', $url);
+                        break;
+                    case 9:
+                        $url = "./Views/images/muñeco/10-pieDer.png"
+                        $("#muñeco").attr('src', $url);
+                        break;
+                    case 10:
+                        $url = "./Views/images/muñeco/11-conejoCompleto.png"
+                        $("#muñeco").attr('src', $url);
+                        $(".letra").prop('disabled', true);
+                        alert("El conejo se ha muerto :(.");
+                        break;
+                    
+                }
+                
             });
 
         });
@@ -20,7 +85,7 @@
 <div class="card-body">
                         <div id="virtual-keyboard">
                             <div class="keyboard-row">
-                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_Q.png" value="Q" />
+                                <input class="letra" type="image" src="./Views/images/letras/azul/Letter_Q.png" value="Q"/>
                                 <input class="letra" type="image" src="./Views/images/letras/azul/Letter_W.png" value="W" />
                                 <input class="letra" type="image" src="./Views/images/letras/azul/Letter_E.png" value="E" />
                                 <input class="letra" type="image" src="./Views/images/letras/azul/Letter_R.png" value="R"/>
@@ -53,5 +118,7 @@
                             </div>
                         </div>
                     </div>
+
+                    <img src="./Views/images/muñeco/1-suelo.png" id="muñeco" width="500px">
 </body>
 </html>
