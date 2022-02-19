@@ -12,8 +12,8 @@
         body {
 
             background-image: url("https://www.visitasevilla.es/sites/default/files/extended_page/img_header/plaza_espana_sevilla_0.jpg");
-            background-color: #cccccc;            
-            background-size: cover;    
+            background-color: #cccccc;
+            background-size: cover;
         }
 
         .muñeco {
@@ -38,10 +38,9 @@
             width: 120px;
         }
 
-        .ancho{
+        .ancho {
             width: 300px;
         }
-
     </style>
 </head>
 
@@ -77,20 +76,21 @@
 
             <table class="bg-light align-items-center">
                 <tr>
-                    <th class = "bg-success">
+                    <th class="bg-success">
                         <h1>Nombre</h1>
                     </th>
-                    <th class = "bg-success">
+                    <th class="bg-success">
                         <h1>Curso</h1>
                     </th>
-                    <th class = "ancho bg-success">
-                        <h1 >Puntuación</h1>
+                    <th class="ancho bg-success">
+                        <h1>Puntuación</h1>
                     </th>
                 </tr>
                 <?php foreach ($clases as $clase) : ?>
                     <tr>
+                        <td><?php echo $clase['nombre']; ?></td>
                         <td><?php echo $clase['clase']; ?></td>
-                        <td><?php echo $clase['puntuacion']; ?></td>
+                        <td><?php echo $clase['puntuaciones']; ?></td>
                     </tr>
                 <?php endforeach; ?>
             </table>
