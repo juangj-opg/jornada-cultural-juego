@@ -21,7 +21,7 @@
 
 // Recoger monumentoso de una provincia
 
-$idProvincia = 2;
+$idProvincia = 3;
 
 $provinciaMonumentos = getMonumentosProvincia($idProvincia);
 $arrayProvincias = [];
@@ -29,7 +29,7 @@ $count = 1;
 
 foreach ($provinciaMonumentos as $monumento) {
     //echo "<br>".$monumento['monumento'];
-    $monumento = array($count++, $monumento['monumento']);
+    $monumento = array($count++, $monumento['monumento'], $monumento['idMonumentos']);
     $arrayProvincias[] = $monumento;
     //echo random_int(1,2);
 }
@@ -43,7 +43,15 @@ echo "<br><br>";
 
 $randonMonument = random_int(1,$contadorMonumentos);
 
-$monumento = getMonumento($randonMonument);
+$id = 1;
+foreach ($arrayProvincias as $MonumentoProvincia) {
+    if ($randonMonument == $MonumentoProvincia[0]){
+        $id = $MonumentoProvincia[2]; // ID del monumento seleccionado
+    }
+}
+
+echo "<br>ID del monumento seleccionado: ".$id."<br>";
+$monumento = getMonumento($id);
 var_dump($monumento) ;
 
 
