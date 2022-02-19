@@ -1,6 +1,3 @@
-
-
-
 <html>
 
 <head>
@@ -8,12 +5,13 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 </head>
 
 <body>
 
-<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
         <a class="d-flex align-items-center text-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
                 <use xlink:href="#bootstrap" />
@@ -22,6 +20,7 @@
         <h1 class="col-12 col-md-auto mb-2 justify-content-center mb-md-0 text-light">
             El conejo ahorcado
         </h1>
+
         <div class="dropdown text-end me-5">
             <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="https://cdn-icons-png.flaticon.com/512/802/802338.png" alt="mdo" width="52" height="52" class="rounded-circle">
@@ -38,33 +37,41 @@
                 <li><a class="dropdown-item" href="#">Salir</a></li>
             </ul>
         </div>
+
+
     </header>
+    <br>
+    <br>
+
+    <img id="flechita" src="./images/Arrow.png" alt="flecha de prueba" width="100" height="100">
+
 
     <!--Contenedor Ruleta-->
-    <div class = "container">
-        
-            <div id="mainbox" class="mainbox text-center">
-            <div id="box" class="box">
 
-                <!-- parte occidental -->
-                <div class="box1">
-                    <span class="span1"><b>SEVILLA</b></span>
-                    <span class="span2"><b>CÁDIZ</b></span>
-                    <span class="span3"><b>CÓRDOBA</b></span>
-                    <span class="span4"><b>HUELVA</b></span>
-                </div>
+    <!-- <div class="col-12 col-md-auto mb-2 justify-content-center">  CSS APLICA EN VEZ BOOTSTRAP PARA ENCAJARLA -->
 
-                <!-- parte oriental -->
-                <div class="box2">
-                    <span class="span2"><b>MÁLAGA</b></span>
-                    <span class="span1"><b>JAÉN</b></span>
-                    <span class="span3"><b>GRANADA</b></span>
-                    <span class="span4"><b>ALMERÍA</b></span>
-                </div>
+    <div id="mainbox" class="mainbox">
+        <div id="box" class="box">
+            <!-- parte occidental -->
+            <div class="ruleta1">
+                <span class="span1"><b>SEVILLA</b></span>
+                <span class="span2"><b>CÁDIZ</b></span>
+                <span class="span3"><b>CÓRDOBA</b></span>
+                <span class="span4"><b>HUELVA</b></span>
             </div>
-            <button class="spin" id="girar" onclick="myfunction()">GIRAR</button>
-        </div>  
+
+            <!-- parte oriental -->
+            <div class="ruleta2">
+                <span class="span2"><b>MÁLAGA</b></span>
+                <span class="span1"><b>JAÉN</b></span>
+                <span class="span3"><b>GRANADA</b></span>
+                <span class="span4"><b>ALMERÍA</b></span>
+            </div>
+        </div>
+        <button class="spin" id="girar" onclick="myfunction()">GIRAR</button>
     </div>
+
+    <!-- </div> -->
 
 
     <script src="script.js"></script>
@@ -75,7 +82,15 @@
 <script>
     function myfunction() {
 
+        $("button").css("background-color", "grey");
+        $("button").css("color", "black");
+        $("button").text("·");
+
+        $("button").toggleClass('clicked');
+        $(flechita).toggleClass('flechita');
+
         document.getElementById("girar").removeAttribute("onclick");
+
 
         var x = 1080; //min value is 3 vueltas
         var y = 1440; // max value is 4 vueltas
@@ -83,8 +98,10 @@
         var deg = Math.floor(Math.random() * (x - y)) + y;
         var gradosFinales = deg - 1080;
 
+        // La ruleta empieza en 22º!
+
         //enviar ciudades  con _POST  ajax
-        
+
         //evento gira ruleta 
         document.getElementById('box').style.transition = "all ease 2s";
         document.getElementById('box').style.transform = "rotate(" + deg + "deg)";
@@ -98,7 +115,7 @@
 </script>
 
 <style>
-   /* * {
+    /* * {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
@@ -106,7 +123,9 @@
     }*/
 
 
-    body {        
+    body {
+        background-image: url("https://www.visitasevilla.es/sites/default/files/extended_page/img_header/plaza_espana_sevilla_0.jpg");
+        background-color: #cccccc;
         background-size: cover;
     }
 
@@ -115,10 +134,24 @@
         position: relative;
         width: 500px;
         height: 500px;
-        
+        margin: auto;
     }
 
-   
+
+    /* Flecha */
+    #flechita {
+        display: block;
+        position: relative;
+        opacity: 0.85;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .flechita {
+        animation: animar;
+        animation-duration: 1.75s;
+
+    }
 
     .box {
         width: 100%;
@@ -127,7 +160,7 @@
         border-radius: 50%;
         border: 10px solid black;
         overflow: hidden;
-        
+
     }
 
     /*Opciones de provincias*/
@@ -147,7 +180,7 @@
 
     }
 
-    /*Opciones Cádiz y Málaga*/ 
+    /*Opciones Cádiz y Málaga*/
     .span2 {
         clip-path: polygon(100% 92%, 0 50%, 100% 8%);
         background-color: darkgreen;
@@ -173,25 +206,25 @@
 
     /*Rotaciones de texto*/
 
-    .box1 .span3 b {
+    .ruleta1 .span3 b {
         transform: translate(-50%, -50%) rotate(-270deg);
     }
 
-    .box1 .span1 b,
-    .box2 .span1 b {
+    .ruleta1 .span1 b,
+    .ruleta2 .span1 b {
         transform: translate(-50%, -50%) rotate(185deg);
     }
 
-    .box2 .span3 b {
+    .ruleta2 .span3 b {
         transform: translate(-50%, -50%) rotate(90deg);
     }
 
-    .box1 .span4 b,
-    .box2 .span4 b {
+    .ruleta1 .span4 b,
+    .ruleta2 .span4 b {
         transform: translate(-50%, -50%) rotate(-85deg);
     }
 
-    .box2 {
+    .ruleta2 {
         width: 100%;
         height: 100%;
         transform: rotate(-135deg);
@@ -229,12 +262,72 @@
     }
 
     .mainbox.animate:after {
-        animation: animateArrow 0.7s ease infinite;
+        animation: animar 0.5s ease infinite;
     }
 
-    @keyframes animateArrow {
+    @keyframes xml_parse {
         50% {
-            right: -40px;
+            right: -20px;
+            left: -20px;
         }
+    }
+
+    @keyframes animar {
+
+        0% {
+            transform: rotate(0deg) scale(1);
+        }
+
+        10% {
+            transform: rotate(10deg) scale(1);
+        }
+
+        20% {
+            transform: rotate(-10deg) scale(1);
+        }
+
+        30% {
+            transform: rotate(10deg) scale(1);
+        }
+
+        40% {
+            transform: rotate(-10deg) scale(1);
+        }
+
+        50% {
+            transform: rotate(10deg) scale(1);
+        }
+
+        60% {
+            transform: rotate(-10deg) scale(1);
+        }
+
+        70% {
+            transform: rotate(10deg) scale(1);
+        }
+
+        80% {
+            transform: rotate(-10deg) scale(1);
+        }
+
+        90% {
+            transform: rotate(10deg) scale(1);
+        }
+
+        100% {
+            transform: rotate(0deg) scale(1);
+        }
+    }
+
+    .botonBloqueado {
+        background-color: gray;
+    }
+
+    .runrun {
+        display: block;
+        position: absolute;
+        margin-left: 45%;
+        margin-right: auto;
+        width: 50%;
     }
 </style>
