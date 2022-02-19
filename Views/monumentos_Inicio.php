@@ -29,17 +29,9 @@
                 <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="https://cdn-icons-png.flaticon.com/512/802/802338.png" alt="mdo" width="52" height="52" class="rounded-circle">
                 </a>
-                <ul class="dropdown-menu fs-3 text-center">
-                    <li><a class="dropdown-item" href="?action=ruleta">Jugar de nuevo</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Ver puntuación</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Salir</a></li>
-                </ul>
+                <<<<<<< HEAD <ul class="dropdown-menu fs-3 text-center">
+                    <li><a class="dropdown-item" href="index.php?controller=monumentos&action=puntuaciones">Ver puntuación</a></li>
+                    </ul>
             </div>
         </header>
         <!-- Formulario Login Kid-->
@@ -152,9 +144,7 @@
             .login-form {
                 background-color: greenyellow;
                 padding: 30px;
-            }
-
-            button {}
+            }            
 
             .btn {
                 height: 100px;

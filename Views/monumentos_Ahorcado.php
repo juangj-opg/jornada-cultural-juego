@@ -12,8 +12,8 @@
 <style>
     body {
         background-image: url("https://www.visitasevilla.es/sites/default/files/extended_page/img_header/plaza_espana_sevilla_0.jpg");
-        background-color: #cccccc;        
-        background-size: cover;    
+        background-color: #cccccc;
+        background-size: cover;
     }
 
     .muñeco {
@@ -28,7 +28,7 @@
 
 <body>
 
-<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
         <a class="d-flex align-items-center text-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
                 <use xlink:href="#bootstrap" />
@@ -42,15 +42,11 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/802/802338.png" alt="mdo" width="52" height="52" class="rounded-circle">
             </a>
             <ul class="dropdown-menu fs-3 text-center">
-                <li><a class="dropdown-item" href="#">Jugar de nuevo</a></li>
+                <li><a class="dropdown-item" href="index.php?controller=monumentos&action=puntuaciones">Ver puntuación</a></li>
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="#">Ver puntuación</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Salir</a></li>
+                <li><a class="dropdown-item" href="index.php">Salir</a></li>
             </ul>
         </div>
     </header>
