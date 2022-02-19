@@ -10,10 +10,10 @@
     <title>JC 2022 - Ahorcado</title>
 </head>
 <style>
-        body {
-
+    body {
         background-image: url("https://www.visitasevilla.es/sites/default/files/extended_page/img_header/plaza_espana_sevilla_0.jpg");
-        background-color: #cccccc;
+        background-color: #cccccc;        
+        background-size: cover;    
     }
 
     .muñeco {

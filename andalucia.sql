@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 08-02-2022 a las 20:58:30
+-- Tiempo de generación: 19-02-2022 a las 18:32:10
 -- Versión del servidor: 8.0.28-0ubuntu0.20.04.3
 -- Versión de PHP: 7.4.3
 
@@ -23,6 +23,20 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `andalucia` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `andalucia`;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `alumnos`
+--
+
+DROP TABLE IF EXISTS `alumnos`;
+CREATE TABLE `alumnos` (
+  `id` int NOT NULL,
+  `nombre` text COLLATE utf8mb4_general_ci NOT NULL,
+  `idClase` int NOT NULL,
+  `puntuaciones` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -91,32 +105,37 @@ INSERT INTO `provincias` (`id`, `provincia`) VALUES
 DROP TABLE IF EXISTS `puntuaciones`;
 CREATE TABLE `puntuaciones` (
   `id` int NOT NULL,
-  `clase` text COLLATE utf8mb4_general_ci NOT NULL,
-  `puntuacion` int NOT NULL
+  `clase` text COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `puntuaciones`
 --
 
-INSERT INTO `puntuaciones` (`id`, `clase`, `puntuacion`) VALUES
-(1, '1º ESO A', 0),
-(2, '1º ESO B', 0),
-(3, '1º ESO C', 0),
-(4, '1º ESO D', 0),
-(5, '2º ESO A', 0),
-(6, '2º ESO B', 0),
-(7, '2º ESO C', 0),
-(8, '2º ESO D', 0),
-(9, '3º ESO A', 0),
-(10, '3º ESO B', 0),
-(11, '3º ESO C', 0),
-(12, '3º ESO D', 0),
-(13, 'FPGM 1º SMR', 0);
+INSERT INTO `puntuaciones` (`id`, `clase`) VALUES
+(1, '1º ESO A'),
+(2, '1º ESO B'),
+(3, '1º ESO C'),
+(4, '1º ESO D'),
+(5, '2º ESO A'),
+(6, '2º ESO B'),
+(7, '2º ESO C'),
+(8, '2º ESO D'),
+(9, '3º ESO A'),
+(10, '3º ESO B'),
+(11, '3º ESO C'),
+(12, '3º ESO D'),
+(13, 'FPGM 1º SMR');
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `alumnos`
+--
+ALTER TABLE `alumnos`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `monumentos`
@@ -140,6 +159,12 @@ ALTER TABLE `puntuaciones`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `alumnos`
+--
+ALTER TABLE `alumnos`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `monumentos`

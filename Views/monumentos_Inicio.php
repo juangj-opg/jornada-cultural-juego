@@ -30,7 +30,11 @@
                     <img src="https://cdn-icons-png.flaticon.com/512/802/802338.png" alt="mdo" width="52" height="52" class="rounded-circle">
                 </a>
                 <ul class="dropdown-menu fs-3 text-center">
-                    <li><a class="dropdown-item" href="#">Jugar de nuevo</a></li>
+                    <li><a class="dropdown-item" href="?action=ruleta">Jugar de nuevo</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Ver puntuación</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
@@ -60,7 +64,7 @@
                             <small id="emailHelp"><br>* ¡Hay un ranking con las mejores clases! 🥇🥈🥉</small>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button type="button" id="jugar" class="btn btn-danger">JUGAR</button>
+                            <a href="?action=ruleta"><button type="button" id="jugar" class="btn btn-danger">JUGAR</button></a>
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">
@@ -77,9 +81,9 @@
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#5a6165;"></rect><text x="50%" y="50%" fill="#777" dy=".3em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#9d9488;">140x140</text>
                     <image height="140" width="140" xlink:href="https://amaga.es/image/cache/catalog/productos/banderas%20y%20mastiles/banderas%20autonomicas/andalucia-800x800.jpg" clip-path="url(#myCircle)" />
-                    
+
                 </svg>
-                
+
                 <br>
                 <br>
                 <div class="guia">
@@ -116,6 +120,7 @@
             body {
                 padding: 0px;
                 background-image: url("https://www.visitasevilla.es/sites/default/files/extended_page/img_header/plaza_espana_sevilla_0.jpg");
+                background-size: cover;
                 background-color: #cccccc;
             }
 
