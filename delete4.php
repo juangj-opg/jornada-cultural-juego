@@ -52,7 +52,7 @@ for ($i=0; $i < $count ; $i++) {
     if ($cortado == " "){
         $array[] = " ";
     } else {
-        $array[] = " _";
+        $array[] = "_";
     }
 }
 $palabra = "";
@@ -81,13 +81,45 @@ foreach ($array as $P) {
             palabraCaps = palabra;
             palabra = palabra.toLowerCase();
 
+            function remplazarLetra(letra)
+            {
+                var letra;
+
+                var tildes =[
+                    /[\300-\306]/g, /[\340-\346]/g,  // A, a
+                    /[\310-\313]/g, /[\350-\353]/g,  // E, e
+                    /[\314-\317]/g, /[\354-\357]/g,  // I, i
+                    /[\322-\330]/g, /[\362-\370]/g,  // O, o
+                    /[\331-\334]/g, /[\371-\374]/g,  // U, u
+                    /[\321]/g, /[\361]/g, // N, n
+                    /[\307]/g, /[\347]/g, // C, c
+                ];
+
+                var chars = ['A','a','E','e','I','i','O','o','U','u','N','n','C','c'];
+
+                for (var i = 0; i < tildes.length; i++)
+                {
+                    letra = letra.replace(tildes[i],chars[i]);
+                }
+                console.log("prueba")
+                console.log(letra);
+                return letra;
+            }
+
             $(".letra").click(function() {
                 //alert($(this).val());
                 $letra = $(this).val().toLowerCase();
+                console.log($letra);
+                if ($letra == "á" || $letra == "é" || $letra == "í" || $letra == "ó" || $letra == "ú")
+                    $letra = remplazarLetra($letra);
+
+
                 if(palabra.includes($letra)){
                     $src = './Views/images/letras/verde/Letter_'+$letra.toUpperCase()+'_green.png'
                     $(this).attr('src', $src);
                     $(this).prop('disabled', true);
+                    transformaGuiones($letra)
+
                 } else {
                     $src = './Views/images/letras/rojo/Letter_'+$letra.toUpperCase()+'_red.png'
                     $(this).attr('src', $src);
@@ -147,6 +179,33 @@ foreach ($array as $P) {
                 
             });
 
+            String.prototype.replaceAt = function(index, replacement) {
+                return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+            }
+
+            function transformaGuiones(letra)
+            {
+                var palabra_actual = $("#palabra").text()
+                for (let i = 0; i < palabra.length; i++) {
+                    console.log(palabraCaps.substr(i, 1));
+
+                    // Cambiador de tildes por letra normales
+                    if (palabra.substr(i,1) == "á")  palabra = palabra.replaceAt(i,"a");
+                    if (palabra.substr(i,1) == "é")  palabra = palabra.replaceAt(i,"e");
+                    if (palabra.substr(i,1) == "í")  palabra = palabra.replaceAt(i,"i");
+                    if (palabra.substr(i,1) == "ó")  palabra = palabra.replaceAt(i,"o");
+                    if (palabra.substr(i,1) == "ú")  palabra = palabra.replaceAt(i,"u");
+                    
+                    if(palabra.substr(i, 1) == letra){
+                        console.log("Coincide");
+                        palabra_actual = palabra_actual.replaceAt(i, palabraCaps.substr(i, 1));
+                        $("#palabra").text(palabra_actual)
+                        
+                    }
+                    
+                }
+            }
+
         });
     </script>
 </head>
@@ -189,6 +248,6 @@ foreach ($array as $P) {
                     </div>
 
                     <img src="./Views/images/muñeco/1-suelo.png" id="muñeco" width="500px">
-                    <h1><?php echo $palabra; ?></h1>
+                    <h1 id="palabra" style="letter-spacing: 7px;"><?php echo $palabra; ?></h1>
 </body>
 </html>
