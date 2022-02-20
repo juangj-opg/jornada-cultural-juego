@@ -25,7 +25,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/802/802338.png" alt="mdo" width="52" height="52" class="rounded-circle">
             </a>
             <ul class="dropdown-menu fs-3 text-center">                
-                <li><a class="dropdown-item" href="index.php?controller=monumentos&action=puntuaciones">Ver puntuación</a></li>
+                <li><a class="dropdown-item" href="index.php?controller=alumnos&action=puntuaciones">Ver puntuación</a></li>
                 <li>
                     <hr class="dropdown-divider">
                 </li>

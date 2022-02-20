@@ -30,7 +30,7 @@
                     <img src="https://cdn-icons-png.flaticon.com/512/802/802338.png" alt="mdo" width="52" height="52" class="rounded-circle">
                 </a>
                 <<<<<<< HEAD <ul class="dropdown-menu fs-3 text-center">
-                    <li><a class="dropdown-item" href="index.php?controller=monumentos&action=puntuaciones">Ver puntuación</a></li>
+                    <li><a class="dropdown-item" href="index.php?controller=alumnos&action=puntuaciones">Ver puntuación</a></li>
                     </ul>
             </div>
         </header>
@@ -41,9 +41,9 @@
         <div class="row me-0">
             <div class="col-md-6">
                 <div class="login-form">
-                    <form action="/examples/actions/confirmation.php" method="post">
+                    <form action="" method="post">
                         <div class="form-group">
-                            <input type="text" style="background-color: white" pattern="[a-Z]" class="form-control text-center" placeholder="Introduce tu nombre" required="required">
+                            <input type="text" name="nombre" style="background-color: white" pattern="[a-Z]" class="form-control text-center" placeholder="Introduce tu nombre" required="required">
                         </div>
                         <div class="form-group">
                             <select name="clase" style="background-color: white" class="form-control text-center" placeholder="Clase..." required="required">
@@ -56,7 +56,7 @@
                             <small id="emailHelp"><br>* ¡Hay un ranking con las mejores clases! 🥇🥈🥉</small>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <a href="?action=ruleta"><button type="button" id="jugar" class="btn btn-danger">JUGAR</button></a>
+                            <button type="submit" id="jugar" class="btn btn-danger">JUGAR</button>
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">
@@ -144,7 +144,9 @@
             .login-form {
                 background-color: greenyellow;
                 padding: 30px;
-            }            
+            }
+
+            button {}
 
             .btn {
                 height: 100px;

@@ -3,7 +3,7 @@
 define ('CONTROLLERS_FOLDER', "Controllers/");
 
 //Si no se indica un controlador, este es el controlador que se usará
-define ('DEFAULT_CONTROLLER', "monumentos");
+define ('DEFAULT_CONTROLLER', "alumnos");
 
 //Si no se indica una acción, esta acción es la que se usará
 define ('DEFAULT_ACTION', "inicio");
