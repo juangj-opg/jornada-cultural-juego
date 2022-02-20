@@ -31,6 +31,11 @@ function ahorcado(){
     // Y convertimos el nombre en guiones que será usado en el juego.
     $palabra = convertirMonumentoEnGuiones($monumento);
 
+    // Guardar el monumento en una Cookie para el uso en JS
+
+    $nombreMonumento = $monumento['monumento'];
+    setcookie("monumento", $nombreMonumento);
+
     include "Views/monumentos_Ahorcado.php";
 }
 
