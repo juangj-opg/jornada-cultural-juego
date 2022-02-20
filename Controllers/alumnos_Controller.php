@@ -1,6 +1,9 @@
 <?php
+session_start();
+
 function inicio(){
     require "Models/clases_Model.php"; 
+    //session_destroy();
     $clases = getClases();
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = true;
@@ -14,12 +17,30 @@ function inicio(){
         }
 
         $clase = $_POST["clase"];
-
-        $alumno = addAlumno($nombre, $clase); // Para recoger el nombre y la ID de las clases
+        $alumno = addAlumno($nombre, $clase);
+        $_SESSION["idAlum"] = $alumno;
+        $clase = getAlumno($alumno);
+        $_SESSION["idClas"] = $clase["idClase"];
+        //$alumno = addAlumno($nombre, $clase); // Para recoger el nombre y la ID de las clases
         header("Location: index.php?controller=monumentos&action=ruleta");
     }
 
     include "Views/monumentos_Inicio.php";
+}
+
+function aumPunt() {
+    require "Models/clases_Model.php";
+
+    // 
+    $alumno = getAlumno($_SESSION["idAlum"]);
+    $puntuacion = $alumno['puntuaciones']+1;
+    setPuntuaciones($_SESSION["idAlum"], $puntuacion);
+
+    $clase = getClase($_SESSION["idClas"]);
+    $puntuacion = $clase['puntuacion']+1;
+    setPuntuaciones($_SESSION["idClas"], $puntuacion);
+
+    header("Location: index.php?action=puntuaciones");
 }
 
 function puntuaciones(){
