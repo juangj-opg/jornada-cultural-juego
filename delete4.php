@@ -22,6 +22,8 @@ foreach ($provinciaMonumentos as $monumento) {
     //echo random_int(1,2);
 }
 
+var_dump($arrayProvincias);
+
 $contadorMonumentos = count($arrayProvincias);
 
 $randonMonument = random_int(1,$contadorMonumentos);
@@ -188,7 +190,6 @@ foreach ($array as $P) {
                 var palabra_actual = $("#palabra").text()
                 for (let i = 0; i < palabra.length; i++) {
                     console.log(palabraCaps.substr(i, 1));
-
                     // Cambiador de tildes por letra normales
                     if (palabra.substr(i,1) == "á")  palabra = palabra.replaceAt(i,"a");
                     if (palabra.substr(i,1) == "é")  palabra = palabra.replaceAt(i,"e");
@@ -200,12 +201,9 @@ foreach ($array as $P) {
                         console.log("Coincide");
                         palabra_actual = palabra_actual.replaceAt(i, palabraCaps.substr(i, 1));
                         $("#palabra").text(palabra_actual)
-                        
-                    }
-                    
+                    }      
                 }
             }
-
         });
     </script>
 </head>
