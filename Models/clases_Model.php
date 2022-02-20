@@ -18,6 +18,20 @@ function getClases() {
     $conn = null;
 }
 
+function getClase($idClase) {
+    try {
+        $conn = getConnection();
+        $consulta=$conn->prepare("SELECT * FROM puntuaciones WHERE id = ?");
+        $consulta->bindParam(1, $idClase);
+        $consulta->execute();
+        $monumentos = $consulta->fetch(\PDO::FETCH_ASSOC);
+        return $monumentos;
+    } catch (PDOException $e) {
+        $e->getMessage();
+    }
+    $conn = null;
+}
+
 function getAlumnos() {
     try {
         $conn = getConnection();
