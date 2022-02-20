@@ -3,6 +3,7 @@ session_start();
 
 function inicio(){
     require "Models/clases_Model.php"; 
+    unset($_COOKIE['provincia']);
     //session_destroy();
     $clases = getClases();
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -34,11 +35,11 @@ function aumPunt() {
     // 
     $alumno = getAlumno($_SESSION["idAlum"]);
     $puntuacion = $alumno['puntuaciones']+1;
-    setPuntuaciones($_SESSION["idAlum"], $puntuacion);
+    setAlumno($_SESSION["idAlum"], $puntuacion);
 
     $clase = getClase($_SESSION["idClas"]);
     $puntuacion = $clase['puntuacion']+1;
-    setPuntuaciones($_SESSION["idClas"], $puntuacion);
+    setClase($_SESSION["idClas"], $puntuacion);
 
     header("Location: index.php?action=puntuaciones");
 }

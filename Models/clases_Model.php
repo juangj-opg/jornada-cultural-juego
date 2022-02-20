@@ -74,12 +74,27 @@ function addAlumno($nombre, $idClase) {
     $conn = null;
 }
 
-function setPuntuaciones($idAlumno, $puntuaciones) {
+function setAlumno($idAlumno, $puntuaciones) {
     try {
         $conn = getConnection();
         $sql = $conn->prepare("UPDATE alumnos SET puntuaciones=? WHERE id=?");
         $sql->bindParam(1, $puntuaciones);
         $sql->bindParam(2, $idAlumno);
+        $sql->execute();
+        $last_id = $conn->lastInsertId();
+        return $last_id;
+    } catch (PDOException $e) {
+        return -1;
+    }
+    $conn = null;
+}
+
+function setClase($idClase, $puntuaciones) {
+    try {
+        $conn = getConnection();
+        $sql = $conn->prepare("UPDATE puntuaciones SET puntuacion=? WHERE id=?");
+        $sql->bindParam(1, $puntuaciones);
+        $sql->bindParam(2, $idClase);
         $sql->execute();
         $last_id = $conn->lastInsertId();
         return $last_id;
