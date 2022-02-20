@@ -45,15 +45,14 @@
 
     <div id="mainbox" class="mainbox">
         <div id="box" class="box">
-            <!-- parte occidental -->
+            <!-- provincias occidentales -->
             <div class="ruleta1">
                 <span class="span1"><b>SEVILLA</b></span>
                 <span class="span2"><b>CÁDIZ</b></span>
                 <span class="span3"><b>CÓRDOBA</b></span>
                 <span class="span4"><b>HUELVA</b></span>
             </div>
-
-            <!-- parte oriental -->
+            <!-- provincias orientales -->
             <div class="ruleta2">
                 <span class="span2"><b>MÁLAGA</b></span>
                 <span class="span1"><b>JAÉN</b></span>
@@ -61,43 +60,28 @@
                 <span class="span4"><b>ALMERÍA</b></span>
             </div>
         </div>
-        <button class="spin" id="girar" onclick="myfunction()">GIRAR</button>
+        <button class="spin" id="girar" onclick="girarRuleta()">GIRAR</button>
     </div>
-
-    <!-- </div> -->
-
-
     <script src="script.js"></script>
 </body>
 
 </html>
-
 <script>
-    function myfunction() {
-
+    function girarRuleta() {
         $("button").css("background-color", "grey");
         $("button").css("color", "black");
         $("button").text("·");
-
         $("button").toggleClass('clicked');
         $(flechita).toggleClass('flechita');
-
         document.getElementById("girar").removeAttribute("onclick");
 
-
-        var x = 1080; //min value is 3 vueltas
-        var y = 1440; // max value is 4 vueltas
-
+        var x = 1080; // 3 vueltas de 360º
+        var y = 1440; // 4 vueltas de 360º
         var deg = Math.floor(Math.random() * (x - y)) + y;
-        var gradosFinales = deg - 1080 + 22; // -- El 22 es el punto central del primer triángulo
-
+        var gradosFinales = deg - 1080 + 22; // -- El 22º es el punto central del primer triángulo
         console.log(gradosFinales);
 
-        // Matemática en grados
-        // Recogemos la ciudad o id para el juego
-
-        // Almacenamos provincias por cookies:
-
+        // Almacenamos en cookie -> id Provincia
         if (gradosFinales >= 0 && gradosFinales < 45) {
             alert("Huelva!");
             document.cookie = "provicia=4";
@@ -124,11 +108,7 @@
             document.cookie = "provicia=1";
         }
 
-        // La ruleta empieza en 22º!
-
-        //enviar ciudades  con _POST  ajax
-
-        //evento gira ruleta 
+        // Animaciones
         document.getElementById('box').style.transition = "all ease 2s";
         document.getElementById('box').style.transform = "rotate(" + deg + "deg)";
         var element = document.getElementById('mainbox');
@@ -136,19 +116,25 @@
         element.classList.remove('animate');
         setTimeout(function() {
             element.classList.add('animate');
-        }, 1000); //5000 = 5 second
+        }, 1000);
+
+        const myTimeout = setTimeout(cambioBoton, 2100);
+
+        function cambioBoton() {
+            $("button").css("background-color", "red");
+            $("button").css("color", "white");
+            $("button").text("JUGAR");
+            document.getElementById("girar").addAttribute("onclick");
+            $("button").attr("onclick","cambioJugar()");
+        }
+
+        function cambioJugar() {
+            location.href = "index.php?controller=monumentos&action=ahorcado";
+        }
     }
 </script>
 
 <style>
-    /* * {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        outline: none;
-    }*/
-
-
     body {
         background-image: url("https://www.visitasevilla.es/sites/default/files/extended_page/img_header/plaza_espana_sevilla_0.jpg");
         background-color: #cccccc;
