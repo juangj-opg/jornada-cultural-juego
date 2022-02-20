@@ -14,8 +14,12 @@
 <style>
     body {
         background-image: url("https://www.visitasevilla.es/sites/default/files/extended_page/img_header/plaza_espana_sevilla_0.jpg");
-        background-color: #cccccc;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
         background-size: cover;
+        scroll-behavior: smooth;
+        background-color: #cccccc;
     }
 
     .muñeco {
