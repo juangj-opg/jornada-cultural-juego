@@ -36,7 +36,7 @@
     <br>
     <br>
 
-    <img id="flechita" src="./images/Arrow.png" alt="flecha de prueba" width="100" height="100">
+    <img id="flechita" src="./Views/images/Arrow.png" alt="flecha de prueba" width="100" height="100">
 
 
     <!--Contenedor Ruleta-->
