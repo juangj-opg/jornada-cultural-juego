@@ -65,7 +65,7 @@
             <div class="col-12 col-md-8 col-lg-6 text-center mb-4 ">
                 <div class="cuadro card p-3 mb-4 bg-light bg-opacity-50">
                     <div class="card-body">
-                        <img class="muñeco" src="./images//muñeco//11-conejoCompleto.png" alt="">
+                        <img class="muñeco" src="./Content/images/muñeco/1-suelo.png" alt="">
                     </div>
                 </div>
             </div>
@@ -77,36 +77,36 @@
                     <div class="card-body">
                         <div id="virtual-keyboard">
                             <div class="keyboard-row">
-                                <input type="image" src="./images/letras/azul/Letter_Q.png" />
-                                <input type="image" src="./images/letras/azul/Letter_W.png" />
-                                <input type="image" src="./images/letras/azul/Letter_E.png" />
-                                <input type="image" src="./images/letras/azul/Letter_R.png" />
-                                <input type="image" src="./images/letras/azul/Letter_T.png" />
-                                <input type="image" src="./images/letras/azul/Letter_Y.png" />
-                                <input type="image" src="./images/letras/azul/Letter_U.png" />
-                                <input type="image" src="./images/letras/azul/Letter_I.png" />
-                                <input type="image" src="./images/letras/azul/Letter_O.png" />
-                                <input type="image" src="./images/letras/azul/Letter_P.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_Q.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_W.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_E.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_R.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_T.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_Y.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_U.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_I.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_O.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_P.png" />
                             </div>
                             <div class="keyboard-row">
-                                <input type="image" src="./images/letras/azul/Letter_A.png" />
-                                <input type="image" src="./images/letras/azul/Letter_S.png" />
-                                <input type="image" src="./images/letras/azul/Letter_D.png" />
-                                <input type="image" src="./images/letras/azul/Letter_F.png" />
-                                <input type="image" src="./images/letras/azul/Letter_G.png" />
-                                <input type="image" src="./images/letras/azul/Letter_H.png" />
-                                <input type="image" src="./images/letras/azul/Letter_J.png" />
-                                <input type="image" src="./images/letras/azul/Letter_K.png" />
-                                <input type="image" src="./images/letras/azul/Letter_L.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_A.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_S.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_D.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_F.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_G.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_H.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_J.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_K.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_L.png" />
                             </div>
                             <div class="keyboard-row">
-                                <input type="image" src="./images/letras/azul/Letter_Z.png" />
-                                <input type="image" src="./images/letras/azul/Letter_X.png" />
-                                <input type="image" src="./images/letras/azul/Letter_C.png" />
-                                <input type="image" src="./images/letras/azul/Letter_V.png" />
-                                <input type="image" src="./images/letras/azul/Letter_B.png" />
-                                <input type="image" src="./images/letras/azul/Letter_N.png" />
-                                <input type="image" src="./images/letras/azul/Letter_M.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_Z.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_X.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_C.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_V.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_B.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_N.png" />
+                                <input type="image" src="./Content/images/letras/azul/Letter_M.png" />
                             </div>
                         </div>
                     </div>

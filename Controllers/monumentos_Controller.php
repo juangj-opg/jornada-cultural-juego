@@ -13,6 +13,11 @@ function ruleta(){
 function ahorcado(){
     require "Models/clases_Model.php"; 
 
+    // En caso que no tengamos la Cookie del ID de la provincia, le devolveremos a la ruleta.
+    if (!isset($_COOKIE['provincia'])){
+        header("index.php?controller=monumentos&action=ruleta");
+    }
+
     // La ruleta le enviará por GET la id de provincia y con eso, 
     // recogerá una palabradicha provincia en la base de datos.
 
