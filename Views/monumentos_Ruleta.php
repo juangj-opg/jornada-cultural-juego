@@ -11,7 +11,7 @@
 
 <body>
 
-<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
         <a class="d-flex align-items-center text-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
                 <use xlink:href="#bootstrap" />
@@ -24,7 +24,7 @@
             <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="https://cdn-icons-png.flaticon.com/512/802/802338.png" alt="mdo" width="52" height="52" class="rounded-circle">
             </a>
-            <ul class="dropdown-menu fs-3 text-center">                
+            <ul class="dropdown-menu fs-3 text-center">
                 <li><a class="dropdown-item" href="index.php?controller=alumnos&action=puntuaciones">Ver puntuación</a></li>
                 <li>
                     <hr class="dropdown-divider">
@@ -89,7 +89,40 @@
         var y = 1440; // max value is 4 vueltas
 
         var deg = Math.floor(Math.random() * (x - y)) + y;
-        var gradosFinales = deg - 1080;
+        var gradosFinales = deg - 1080 + 22; // -- El 22 es el punto central del primer triángulo
+
+        console.log(gradosFinales);
+
+        // Matemática en grados
+        // Recogemos la ciudad o id para el juego
+
+        // Almacenamos provincias por cookies:
+
+        if (gradosFinales >= 0 && gradosFinales < 45) {
+            alert("Huelva!");
+            document.cookie = "provicia=4";
+        } else if (gradosFinales >= 45 && gradosFinales < 90) {
+            alert("Málaga!");
+            document.cookie = "provicia=5";
+        } else if (gradosFinales >= 90 && gradosFinales < 135) {
+            alert("Sevilla!");
+            document.cookie = "provicia=2";
+        } else if (gradosFinales >= 135 && gradosFinales < 180) {
+            alert("Almería!");
+            document.cookie = "provicia=6";
+        } else if (gradosFinales >= 180 && gradosFinales < 225) {
+            alert("Córdoba!");
+            document.cookie = "provicia=3";
+        } else if (gradosFinales >= 225 && gradosFinales < 270) {
+            alert("Jaén!");
+            document.cookie = "provicia=8";
+        } else if (gradosFinales >= 270 && gradosFinales < 315) {
+            alert("Cádiz!");
+            document.cookie = "provicia=7";
+        } else {
+            alert("Granada!");
+            document.cookie = "provicia=1";
+        }
 
         // La ruleta empieza en 22º!
 
