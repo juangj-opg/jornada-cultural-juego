@@ -1,59 +1,69 @@
 $(document).ready(function () {
-    // Lo que se podría hacer, es pasar por Ajax las palabras (monumento) o meterlo en cookies y de esa manera usarlo ya sea con Javascript o PHP.
+    /* Definición de variables necesarias para el ahorcado
+    *  - fallos: Nº de fallos que se comete. Si fallas 10 veces, has perdido. A más fallos, las imágenes van cambiando
+    *  - palabra: El monumento aleatorio que ha salido aleatoriamente por PHP. Se pasa a minusculas para su uso más adelante.
+    *  - palabraCaps: Es el monumento aleatorio de nuevo, sin pasarlo en minuscula o cambiarle alguno de sus caracteres.
+    *  - La cookie de puntos: Es la puntuación base que recibirá el jugador que lo juegue. A más fallos, menos puntos recibirá el jugador.
+    */
     fallos = 0;
     palabra = getCookie("monumento")
     palabraCaps = palabra;
     palabra = palabra.toLowerCase();
     document.cookie = "puntos=10";
 
-    function remplazarLetra(letra) {
-        var letra;
-
-        var tildes = [
-            /[\300-\306]/g, /[\340-\346]/g,  // A, a
-            /[\310-\313]/g, /[\350-\353]/g,  // E, e
-            /[\314-\317]/g, /[\354-\357]/g,  // I, i
-            /[\322-\330]/g, /[\362-\370]/g,  // O, o
-            /[\331-\334]/g, /[\371-\374]/g,  // U, u
-            /[\321]/g, /[\361]/g, // N, n
-            /[\307]/g, /[\347]/g, // C, c
-        ];
-
-        var chars = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u', 'N', 'n', 'C', 'c'];
-
-        for (var i = 0; i < tildes.length; i++) {
-            letra = letra.replace(tildes[i], chars[i]);
-        }
-        return letra;
-    }
-
+    /* Evento click de JQuery a la clase '.letra'
+    *  - Este evento que activa una función es cada vez que haces
+    *    click en uno de los botones del teclado del ahorcado.
+    * 
+    *  - Esta función recoge la letra pulsada, compara que esté 
+    *    la palabra del monumento y si está, cambiará los guiones
+    *    por la letra pulsada y en caso de error, sumará un error
+    *    hasta que gaste todas sus vidas.
+    */
     $(".letra").click(function () {
-        //alert($(this).val());
+
+        // Convierte la letra en minúsculas y comprueba la acentuación de las vocales para cambiarlos
         letra = $(this).val().toLowerCase();
         if (letra == "á" || letra == "é" || letra == "í" || letra == "ó" || letra == "ú")
             letra = remplazarLetra(letra);
 
-
-        if (palabra.includes(letra)) {
+        // Comprueba que la letra esté incluida en el monumento 
+        if (palabra.includes(letra)) {  
+            // En caso que esté, pondrá la letra como verde (correcto),
+            // y desactivará el botón de forma que no se pueda volver a pulsar
             src = './Content/Images/letras/verde/Letter_' + letra.toUpperCase() + '_green.png'
             $(this).attr('src', src);
             $(this).prop('disabled', true);
+
+            // Llamará a una función para transformar los guiones en las letras correctas
             transformaGuiones(letra)
+
+            // Y comprobará si la palabra que estaba con los guiones, está resuelta
+            // - De estarlo, desactivaría todos los botones y mostraría una pantalla de que has ganado
             palabra_act = $("#palabra").text();
             if(comprobarPalabra(palabra_act, palabraCaps)){
                 $(".letra").prop('disabled', true);
                 $(".resultado").text("¡HAS GANADO!");
                 $(".model").removeClass("invisible").addClass("visible");
             }
-            
 
         } else {
+            // En caso de que la letra no esté en la palabra, la letra se pondrá en roja, se desactivará y sumará un fallo
             src = './Content/Images/letras/rojo/Letter_' + letra.toUpperCase() + '_red.png'
             $(this).attr('src', src);
             $(this).prop('disabled', true);
             fallos++;
         }
-
+        
+        /* 
+        * Este switch, que se activa cada vez que una letra es pulsada,
+        * mirará los fallos que hay, a más fallos, la imagenes cambiarán
+        * y dará menos puntos.
+        * 
+        * En caso de fallar 10 veces, habrás perdido, mostrando
+        * una pantalla de que has perdido y se desactivan todos
+        * los botones del teclado.
+        */
         switch (fallos) {
             case 0:
                 $url = "./Content/Images/muñeco/1-suelo.png"
@@ -111,17 +121,50 @@ $(document).ready(function () {
                 document.cookie = "puntos=0";
                 $(".resultado").text("¡HAS PERDIDO!");
                 $(".model").removeClass("invisible").addClass("visible");
-                // Poner aquí el div de cuando pierdes
-
                 break;
         }
-
     });
 
+    /* Función remplazarLetra(letra)
+    *  - Esta función reemplaza una letra acentuada como 'á'
+    *    para transformarlo en 'a'.
+    * 
+    *  - Su uso es para que no de fallos a la hora 
+    *    de compararlo con el teclado.
+    */
+    function remplazarLetra(letra) {
+        var letra;
+
+        var tildes = [
+            /[\300-\306]/g, /[\340-\346]/g,  // A, a
+            /[\310-\313]/g, /[\350-\353]/g,  // E, e
+            /[\314-\317]/g, /[\354-\357]/g,  // I, i
+            /[\322-\330]/g, /[\362-\370]/g,  // O, o
+            /[\331-\334]/g, /[\371-\374]/g,  // U, u
+            /[\321]/g, /[\361]/g, // N, n
+            /[\307]/g, /[\347]/g, // C, c
+        ];
+    
+        var chars = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u', 'N', 'n', 'C', 'c'];
+    
+        for (var i = 0; i < tildes.length; i++) {
+            letra = letra.replace(tildes[i], chars[i]);
+        }
+        return letra;
+    }
+
+    // Modificación de la función replaceAt
+    // - Esta modificación es para reemplazar segun el indice del string y por el caracter que quieras cambiarlo
     String.prototype.replaceAt = function (index, replacement) {
         return this.substr(0, index) + replacement + this.substr(index + replacement.length);
     }
 
+    /* Función transformaGuiones(letra)
+    * - La función reemplaza los guiones por la letra pulsada
+    *
+    * - Va recorriendo cada letra de la palabra original para saber 
+    *   la ubicación (index) de la palabra y darle el cambiazo.
+    */
     function transformaGuiones(letra) {
         var palabra_actual = $("#palabra").text()
         for (let i = 0; i < palabra.length; i++) {
@@ -139,6 +182,10 @@ $(document).ready(function () {
         }
     }
 
+    /* Función getCookie(name)
+    *  - Esta función solo devuelve el valor de la cookie con el nombre que
+    *    se le haya dado en el argumento name.
+    */
     function getCookie(name) {
         let matches = document.cookie.match(new RegExp(
             "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
@@ -146,6 +193,12 @@ $(document).ready(function () {
         return matches ? decodeURIComponent(matches[1]) : undefined;
     }
 
+    /* Función comprobarPalabra(palabra_act, palabraCaps)
+    *  - Esta función es la que decide si has resuelto el ahorcado o no.
+    *  - Va comparando el nombre del monumento con la 
+    *    la palabra de los guiones, y en caso de estar
+    *    correcto, devolverá true.
+    */
     function comprobarPalabra(palabra_act, palabraCaps){
         palabra_act = palabra_act.replace(/\s/g, '');
         palabraCaps = palabraCaps.replace(/\s/g, ''); 
@@ -155,6 +208,10 @@ $(document).ready(function () {
             return false;
     }
 
+    /* Función temporizador()
+    * - Esta función es un temporizador de 1 minuto, que va dismuyendo.
+    * - *NO IMPLEMENTADO* En caso de llegar a 0:00, mostrará el mensaje de que has perdido. 
+    */
     function temporizador(){
         let h1 = document.querySelector(".tiempo");
         let centesimas = 0;
