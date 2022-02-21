@@ -148,13 +148,8 @@ $(document).ready(function () {
         palabra_act = palabra_act.replace(/\s/g, '');
         palabraCaps = palabraCaps.replace(/\s/g, ''); 
         if(palabra_act == palabraCaps) 
-        {
-            console.log("Ta bien")
             return true
-        }
-        else {
-            console.log("Aun no");
+        else 
             return false;
-        }
     }
 });
