@@ -28,7 +28,7 @@
             <ul class="dropdown-menu fs-3 text-center">
                 <li><a class="dropdown-item" href="index.php?controller=alumnos&action=puntuaciones">Ver puntuación</a></li>
                 <li> <hr class="dropdown-divider"> </li> <!-- Divisor -->
-                <li><a class="dropdown-item" href="index.php">Salir</a></li>
+                <li><a class="dropdown-item" href="index.php?action=sesion">Salir</a></li>
             </ul>
         </div>
     </header>
