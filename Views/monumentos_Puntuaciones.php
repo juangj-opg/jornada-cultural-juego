@@ -12,7 +12,9 @@
 </head>
 
 <body>
-<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
+
+    <!-- Cabecera con el título y menú -->
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
         <a class="d-flex align-items-center text-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
                 <use xlink:href="#bootstrap" />
@@ -27,20 +29,17 @@
             </a>
             <ul class="dropdown-menu fs-3 text-center">
                 <li><a class="dropdown-item" href="index.php?controller=monumentos&action=ruleta">Jugar de nuevo</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
+                    <li> <hr class="dropdown-divider"> </li> <!-- Divisor -->
                 <li><a class="dropdown-item" href="index.php?controller=monumentos&action=puntuaciones">Ver puntuación</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
+                    <li> <hr class="dropdown-divider"> </li> <!-- Divisor -->
                 <li><a class="dropdown-item" href="index.php">Salir</a></li>
             </ul>
         </div>
     </header>
+
+    <!-- Tablón de puntuaciones -->
     <div class="container">
         <div class="row">
-
             <table class="bg-light align-items-center">
                 <tr>
                     <th class="bg-success">
@@ -54,11 +53,11 @@
                     </th>
                 </tr>
                 <?php foreach ($clases as $clase) : ?>
-                    <tr>
-                        <td><?php echo $clase['nombre']; ?></td>
-                        <td><?php echo $clase['clase']; ?></td>
-                        <td><?php echo $clase['puntuaciones']; ?></td>
-                    </tr>
+                <tr>
+                    <td><?php echo $clase['nombre']; ?></td>
+                    <td><?php echo $clase['clase']; ?></td>
+                    <td><?php echo $clase['puntuaciones']; ?></td>
+                </tr>
                 <?php endforeach; ?>
             </table>
         </div>
