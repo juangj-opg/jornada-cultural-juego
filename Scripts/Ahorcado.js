@@ -42,8 +42,8 @@ $(document).ready(function () {
             palabra_act = $("#palabra").text();
             if(comprobarPalabra(palabra_act, palabraCaps)){
                 $(".letra").prop('disabled', true);
-                // Cambiarlo por el div de victoria
-                alert("Has ganado");
+                $(".resultado").text("¡HAS GANADO!");
+                $(".model").removeClass("invisible").addClass("visible");
             }
             
 
@@ -109,6 +109,8 @@ $(document).ready(function () {
                 $("#muñeco").attr('src', $url);
                 $(".letra").prop('disabled', true);
                 document.cookie = "puntos=0";
+                $(".resultado").text("¡HAS PERDIDO!");
+                $(".model").removeClass("invisible").addClass("visible");
                 // Poner aquí el div de cuando pierdes
 
                 break;

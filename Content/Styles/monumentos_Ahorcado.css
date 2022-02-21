@@ -1,0 +1,18 @@
+body {
+    background-image: url("https://w.wallhaven.cc/full/mp/wallhaven-mppr9k.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    scroll-behavior: smooth;
+    background-color: #cccccc;
+}
+
+.muñeco {
+    width: 300px;
+}
+
+.cuadro {
+    margin-left: 20%;
+    margin-right: 20%;
+}

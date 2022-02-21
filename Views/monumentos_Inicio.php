@@ -4,8 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Admin Login</title>
+    <title>JC 2022 - Inicio</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./Content/Styles/monumentos_Inicio.css">
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"> </script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -90,79 +93,6 @@
                 $(".cajawapa").toggle('slow');
             });
         </script>
-        <style>
-            body {
-                padding: 0px;
-                background-image: url("https://w.wallhaven.cc/full/mp/wallhaven-mppr9k.jpg");
-                background-repeat: no-repeat;
-                background-position: center;
-                background-attachment: fixed;
-                background-size: cover;
-                scroll-behavior: smooth;
-                background-color: #cccccc;
-            }
-
-            .login-form {
-                border-radius: 1%;
-                border-width: 5px;
-                border-style: solid;
-                background: url('https://upload.wikimedia.org/wikipedia/commons/6/63/Flag_of_Andalusia_%28simple%29.svg');
-                padding: 50px;
-                margin-left: 30px;
-            }
-
-            .cajawapa {
-                font-size: 20px;
-                border-radius: 1%;
-                border-width: 5px;
-                border-style: solid;
-                background-color: green;
-                padding: 50px;
-
-            }
-
-            .form-control {
-                font-size: 38px;
-                padding: 3px;
-
-            }
-
-            .login-form {
-                padding: 30px;
-            }
-
-
-            .btn {
-                height: 100px;
-                width: 100px;
-                margin-top: 30px;
-                padding: 10px 10px;
-                font-size: 32px;
-                border-radius: 30px;
-                width: 300px;
-                font-style: bold;
-            }
-
-            small {
-                font-size: 18px;
-                font-style: bold;
-            }
-
-            .titular {
-                font-size: 54px;
-                color: black;
-                padding: 15px;
-                background-color: black;
-                margin-bottom: 30px;
-                margin-top: -50px;
-                border-radius: 20px;
-            }
-
-            .guia {
-                font-size: 24px;
-                text-align: center;
-            }
-        </style>
 
     </body>
 

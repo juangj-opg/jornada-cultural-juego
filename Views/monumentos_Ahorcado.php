@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./Content/Styles/monumentos_Ahorcado.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"> </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="Scripts/Ahorcado.js"></script>
     <title>JC 2022 - Ahorcado</title>
 </head>
+<<<<<<< HEAD
 <style>
     body {
         background-image: url("https://w.wallhaven.cc/full/mp/wallhaven-mppr9k.jpg");
@@ -34,6 +36,8 @@
     .rojo { color:red }
 
 </style>
+=======
+>>>>>>> afd859aaeef78a7eea85e63872e7876c5cbc86c5
 
 <body>
 
@@ -65,8 +69,9 @@
 
             <div class="col-12 col-md-8 col-lg-6 align-self-end text-center text-dark mb-4 ">
                 <!--resultado-->
-                <div class="card p-5 mb-4 bg-light bg-opacity-70 ">
+                <div class="card p-5 mb-4 bg-light bg-opacity-70 model invisible">
                     <div class="card-body ">
+                        <h1 class="resultado"></h1>
                         <div class="row">
                             <div class="col">
                                 <form method="get" action="index.php?controller=monumentos&action=ruleta">
