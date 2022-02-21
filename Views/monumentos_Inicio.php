@@ -150,7 +150,6 @@
                 padding: 30px;
             }
 
-            button {}
 
             .btn {
                 height: 100px;
