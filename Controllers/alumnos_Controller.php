@@ -33,8 +33,6 @@ function inicio(){
 function aumPunt() {
     require "Models/clases_Model.php";
 
-    // 
-    
     $alumno = getAlumno($_SESSION["idAlum"]);
     $puntuacion = $alumno['puntuaciones']+$_COOKIE['puntos'];
     setAlumno($_SESSION["idAlum"], $puntuacion);
@@ -43,11 +41,24 @@ function aumPunt() {
     $puntuacion = $clase['puntuacion']+1;
     setClase($_SESSION["idClas"], $puntuacion);
 
-    header("Location: index.php?action=puntuaciones");
+    if ($_GET["ir"] == 1) {
+        header("Location: index.php?controller=monumentos&action=ruleta");
+    } elseif ($_GET["ir"] == 2) {
+        header("Location: index.php?action=puntuaciones");
+    } else {
+        header("Location: index.php?action=sesion");
+    }
+    
 }
 
 function puntuaciones(){
     require "Models/clases_Model.php"; 
+
+    if (!isset($_SESSION["idAlum"])) {
+        $jugar = "Jugar";
+    } else {
+        $jugar = "Jugar de nuevo";
+    }
 
     $clases = getAlumnos(); // Para recoger el nombre y la puntuación de cada clase
 
