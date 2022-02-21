@@ -18,8 +18,12 @@ body {
 }
 
 .cuadroTiempo {
-    width: 175px;
+    width: 180px;
     color: white;
     border: 5px solid rgb(255, 255, 255);
+}
+
+button {
+    width: 100%;
 }
 
