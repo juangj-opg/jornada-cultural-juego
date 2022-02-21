@@ -43,8 +43,9 @@
 
             <div class="col-12 col-md-8 col-lg-6 align-self-end text-center text-dark mb-4 ">
                 <!--resultado-->
-                <div class="card p-5 mb-4 bg-light bg-opacity-70 ">
+                <div class="card p-5 mb-4 bg-light bg-opacity-70 model invisible">
                     <div class="card-body ">
+                        <h1 class="resultado"></h1>
                         <div class="row">
                             <div class="col">
                                 <form method="get" action="index.php?controller=monumentos&action=ruleta">
