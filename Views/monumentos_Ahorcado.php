@@ -64,17 +64,24 @@
                 <!--resultado-->
                 <div class="card p-5 mb-4 bg-light bg-opacity-70 ">
                     <div class="card-body ">
-                        <div class = "row">
-                            <form method="get" action="index.php?controller=monumentos&action=ruleta">
-                                <button type="submit" class="btn btn-primary me-2 ">Jugar de nuevo</button>
-                            </form>
-                            <form method="get" action="index.php">
-                                <button type="submit" class="btn btn-primary me-2 ">Ver puntuación</button>
-                            </form>
-                            <form method="get" action="index.php">
-                                <button type="submit" class="btn btn-dark me-2 ">Salir</button>
-                            </form>
-                        </div>  
+                        <div class="row">
+                            <div class="col">
+                                <form method="get" action="index.php?controller=monumentos&action=ruleta">
+                                    <button type="submit" class="btn btn-primary me-2 ">Jugar de nuevo</button>
+                                </form>
+                            </div>
+                            <div class="col">
+                                <form method="get" action="index.php">
+                                    <button type="submit" class="btn btn-primary me-2 ">Ver puntuación</button>
+                                </form>
+                            </div>
+                            <div class="col">
+                                <form method="get" action="index.php">
+                                    <button type="submit" class="btn btn-dark me-2 ">Salir</button>
+                                </form>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
                 <!--palabra-->
