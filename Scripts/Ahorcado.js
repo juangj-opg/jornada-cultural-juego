@@ -44,6 +44,7 @@ $(document).ready(function () {
             if(comprobarPalabra(palabra_act, palabraCaps)){
                 $(".letra").prop('disabled', true);
                 $(".resultado").text("¡HAS GANADO!");
+                clearInterval(intervalo);
                 $(".model").removeClass("invisible").addClass("visible");
             }
 
@@ -120,6 +121,7 @@ $(document).ready(function () {
                 $(".letra").prop('disabled', true);
                 document.cookie = "puntos=0";
                 $(".resultado").text("¡HAS PERDIDO!");
+                clearInterval(intervalo);
                 $(".model").removeClass("invisible").addClass("visible");
                 break;
         }
@@ -219,7 +221,13 @@ $(document).ready(function () {
 
         function run() {
             if ((centesimas == 0) && (segundos == 0)) {
-               
+                h1.innerHTML = '0' + segundos + ':' + '0' + centesimas;
+                $url = "./Content/Images/muñeco/11-conejoCompleto.png"
+                $("#muñeco").attr('src', $url);
+                $(".letra").prop('disabled', true);
+                document.cookie = "puntos=0";
+                $(".resultado").text("¡HAS PERDIDO!");
+                $(".model").removeClass("invisible").addClass("visible");
             } else {
                 if ((centesimas == 20) && (segundos == 20)){
                     h1.style.color = 'red';
@@ -231,10 +239,15 @@ $(document).ready(function () {
                 } else {
                     --centesimas;
                 }
-                h1.innerHTML = segundos + ':' + centesimas;
+
+                if (segundos < 10) {
+                    h1.innerHTML = '0' + segundos + ':' + centesimas;
+                } else {
+                    h1.innerHTML = segundos + ':' + centesimas;
+                }
             }
         }
-        setInterval(run, 10);
+        intervalo = setInterval(run, 10);
     }
     temporizador();
 });
