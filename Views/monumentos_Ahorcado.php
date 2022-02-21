@@ -71,7 +71,7 @@
             <div class="col-12 col-md-8 col-lg-6 text-center mb-4 ">
                 <div class="cuadro card p-3 mb-4 bg-light bg-opacity-50">
                     <div class="card-body">
-                        <img id="muñeco" class="muñeco" src="./Content/images/muñeco/1-suelo.png" alt="">
+                        <img id="muñeco" class="muñeco" src="./Content/Images/muñeco/1-suelo.png" alt="">
                     </div>
                 </div>
             </div>
@@ -83,36 +83,36 @@
                     <div class="card-body">
                         <div id="virtual-keyboard">
                             <div class="keyboard-row">
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_Q.png" value="Q"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_W.png" value="W" />
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_E.png" value="E" />
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_R.png" value="R"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_T.png" value="T"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_Y.png" value="Y"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_U.png" value="U"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_I.png" value="I"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_O.png" value="O"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_P.png" value="P"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_Q.png" value="Q"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_W.png" value="W" />
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_E.png" value="E" />
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_R.png" value="R"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_T.png" value="T"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_Y.png" value="Y"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_U.png" value="U"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_I.png" value="I"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_O.png" value="O"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_P.png" value="P"/>
                             </div>
                             <div class="keyboard-row">
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_A.png" value="A"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_S.png" value="S"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_D.png" value="D"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_F.png" value="F"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_G.png" value="G"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_H.png" value="H"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_J.png" value="J"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_K.png" value="K"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_L.png" value="L"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_A.png" value="A"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_S.png" value="S"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_D.png" value="D"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_F.png" value="F"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_G.png" value="G"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_H.png" value="H"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_J.png" value="J"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_K.png" value="K"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_L.png" value="L"/>
                             </div>
                             <div class="keyboard-row">
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_Z.png" value="Z"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_X.png" value="X"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_C.png" value="C"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_V.png" value="V"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_B.png" value="B"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_N.png" value="N"/>
-                                <input class="letra" type="image" src="./Content/images/letras/azul/Letter_M.png" value="M"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_Z.png" value="Z"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_X.png" value="X"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_C.png" value="C"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_V.png" value="V"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_B.png" value="B"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_N.png" value="N"/>
+                                <input class="letra" type="image" src="./Content/Images/letras/azul/Letter_M.png" value="M"/>
                             </div>
                         </div>
                     </div>
