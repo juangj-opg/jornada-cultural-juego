@@ -1,9 +1,11 @@
 <?php
 session_start();
+if (!isset($_SESSION["idAlum"])) {
+    header("Location: index.php");
+}
 
 function ruleta(){
     require "Models/clases_Model.php"; 
-    var_dump($_SESSION);
 
     // Enviar por POST el número de opciones de la ruleta del "login" del Inicio.
     // La clase, para no perderla, se podría guardar en Cookies
