@@ -33,10 +33,8 @@
             </ul>
         </div>
     </header>
-    <br>
-    <br>
 
-    <img id="flechita" src="./Content/Images/Arrow.png" alt="flecha de prueba" width="100" height="100">
+    <img id="flechita" src="https://images.vexels.com/media/users/3/177365/isolated/lists/5b3f55baf4232653a76b962443617e32-hoja-de-zanahoria-plana.png" alt="flecha de prueba" width="160">
 
 
     <!--Contenedor Ruleta-->
