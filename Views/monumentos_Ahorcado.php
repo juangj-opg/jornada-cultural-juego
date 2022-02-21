@@ -51,7 +51,7 @@
                     <div class="card-body ">
                         <h1 class="resultado"></h1>
                         <div class="row align-items-center">
-                            <div class="col-12">
+                            <div class="col">
                                 <form method="get" action="index.php?controller=monumentos&action=ruleta">
                                     <button type="submit" class="btn btn-primary me-2 ">Jugar de nuevo</button>
                                     <input type="hidden" name="action" value="aumPunt">
