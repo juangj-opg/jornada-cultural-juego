@@ -12,6 +12,7 @@
     <script src="Scripts/Ahorcado.js"></script>
     <title>JC 2022 - Ahorcado</title>
 </head>
+
 <body>
 
     <!-- Cabecera con el título y menú -->
@@ -30,7 +31,9 @@
             </a>
             <ul class="dropdown-menu fs-3 text-center">
                 <li><a class="dropdown-item" href="index.php?controller=alumnos&action=puntuaciones">Ver puntuación</a></li>
-                <li> <hr class="dropdown-divider"> </li> <!-- Divisor -->
+                <li>
+                    <hr class="dropdown-divider">
+                </li> <!-- Divisor -->
                 <li><a class="dropdown-item" href="index.php">Salir</a></li>
             </ul>
         </div>
@@ -38,11 +41,11 @@
 
     <!-- Contenedor del Ahorcado -->
     <div class="container">
-        <!-- Primer row --> 
+        <!-- Primer row -->
         <div class="row">
             <!-- Primera mitad de la página -->
             <div class="col-12 col-md-8 col-lg-6 align-self-end text-center text-dark mb-4 ">
-                
+
                 <!-- Pantalla de Victoría / Derrota -->
                 <div class="card p-5 mb-4 bg-light bg-opacity-70 model invisible">
                     <div class="card-body ">
@@ -87,7 +90,7 @@
                 </div>
             </div>
         </div>
-        <!-- Fin primer row --> 
+        <!-- Fin primer row -->
 
         <!-- Segundo row -->
         <div class="row justify-content-center">
@@ -134,10 +137,12 @@
             </div>
 
             <!-- Temporizador -->
-            <div class="col-12 col-md-8 col-lg-6 align-self-end text-center mb-4">
-                <div class="cuadro card p-3 mb-4 bg-light bg-opacity-50">
-                    <div class="card-body">                                                
-                        <h1 class="tiempo">60:00</h1>
+            <div class="col-12 col-md-8 col-lg-6 align-self-center mb-4">
+                <div class="row justify-content-center">                    
+                    <div class="cuadroTiempo card p-3 mb-4 bg-dark" style="border-radius:30px">
+                        <div class="card-body ">
+                            <h1 class="tiempo">60:00</h1>
+                        </div>
                     </div>
                 </div>
             </div>
