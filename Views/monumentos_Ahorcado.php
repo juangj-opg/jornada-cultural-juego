@@ -30,6 +30,9 @@
         margin-left: 20%;
         margin-right: 20%;
     }
+
+    .rojo { color:red }
+
 </style>
 
 <body>
@@ -140,6 +143,13 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <!--temporizador-->
+            <div class="col-12 col-md-8 col-lg-6 align-self-end text-center mb-4">
+                <div class="cuadro card p-3 mb-4 bg-light bg-opacity-50">
+                    <div class="card-body">                                                
+                        <h1>60:00</h1>
                 </div>
             </div>
         </div>
