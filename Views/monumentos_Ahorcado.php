@@ -6,31 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./Content/Styles/monumentos_Ahorcado.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"> </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="Scripts/Ahorcado.js"></script>
     <title>JC 2022 - Ahorcado</title>
 </head>
-<style>
-    body {
-        background-image: url("https://w.wallhaven.cc/full/mp/wallhaven-mppr9k.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        background-size: cover;
-        scroll-behavior: smooth;
-        background-color: #cccccc;
-    }
-
-    .muñeco {
-        width: 300px;
-    }
-
-    .cuadro {
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-</style>
 
 <body>
 

@@ -6,45 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./Content/Styles/monumentos_Puntuaciones.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"> </script>
     <title>JC 2022 - Puntuaciones</title>
-    <style>
-        body {
-            background-image: url("https://w.wallhaven.cc/full/mp/wallhaven-mppr9k.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            background-size: cover;
-            scroll-behavior: smooth;
-            background-color: #cccccc;
-        }
-
-        .muñeco {
-            width: 300px;
-        }
-
-        .cuadro {
-            margin-left: 20%;
-            margin-right: 20%;
-        }
-
-        table,
-        tr,
-        td,
-        th {
-            border: 1px solid black;
-            border-radius: 5px;
-            text-align: center;
-        }
-
-        td {
-            width: 120px;
-        }
-
-        .ancho {
-            width: 300px;
-        }
-    </style>
 </head>
 
 <body>
