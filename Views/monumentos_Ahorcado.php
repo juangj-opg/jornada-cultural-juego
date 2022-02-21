@@ -54,16 +54,22 @@
                             <div class="col-12">
                                 <form method="get" action="index.php?controller=monumentos&action=ruleta">
                                     <button type="submit" class="btn btn-primary me-2 ">Jugar de nuevo</button>
+                                    <input type="hidden" name="action" value="aumPunt">
+                                    <input type="hidden" name="ir" value="1">
                                 </form>
                             </div>
                             <div class="col">
-                                <form method="get" action="index.php">
+                                <form method="get" action="index.php?controller=alumnos&action=puntuaciones">
                                     <button type="submit" class="btn btn-primary me-2 ">Puntuaciones</button>
+                                    <input type="hidden" name="action" value="aumPunt">
+                                    <input type="hidden" name="ir" value="2">
                                 </form>
                             </div>
                             <div class="col">
-                                <form method="get" action="index.php">
+                                <form method="get" action="">
                                     <button type="submit" class="btn btn-dark me-2 ">Salir</button>
+                                    <input type="hidden" name="action" value="aumPunt">
+                                    <input type="hidden" name="ir" value="3">
                                 </form>
                             </div>
                         </div>
