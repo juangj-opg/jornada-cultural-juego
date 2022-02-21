@@ -12,6 +12,32 @@
     <script src="Scripts/Ahorcado.js"></script>
     <title>JC 2022 - Ahorcado</title>
 </head>
+<<<<<<< HEAD
+<style>
+    body {
+        background-image: url("https://w.wallhaven.cc/full/mp/wallhaven-mppr9k.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        scroll-behavior: smooth;
+        background-color: #cccccc;
+    }
+
+    .muñeco {
+        width: 300px;
+    }
+
+    .cuadro {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .rojo { color:red }
+
+</style>
+=======
+>>>>>>> afd859aaeef78a7eea85e63872e7876c5cbc86c5
 
 <body>
 
@@ -122,6 +148,13 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <!--temporizador-->
+            <div class="col-12 col-md-8 col-lg-6 align-self-end text-center mb-4">
+                <div class="cuadro card p-3 mb-4 bg-light bg-opacity-50">
+                    <div class="card-body">                                                
+                        <h1>60:00</h1>
                 </div>
             </div>
         </div>

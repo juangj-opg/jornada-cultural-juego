@@ -154,4 +154,30 @@ $(document).ready(function () {
         else 
             return false;
     }
+
+    function temporizador(){
+        let h1 = document.querySelector("h1");
+        let centesimas = 0;
+        let segundos = 15;
+
+        function run() {
+            if ((centesimas == 0) && (segundos == 0)) {
+               
+            } else {
+                if ((centesimas == 10) && (segundos == 10)){
+                    h1.style.color = 'red';
+                }
+                
+                if (centesimas == 0) {
+                    --segundos;
+                    centesimas = 99;
+                } else {
+                    --centesimas;
+                }
+                h1.innerHTML = segundos + ':' + centesimas;
+            }
+        }
+        setInterval(run, 10);
+    }
+    temporizador();
 });
