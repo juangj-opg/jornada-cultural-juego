@@ -4,6 +4,8 @@ $(document).ready(function(){
     palabra = getCookie("monumento")
     palabraCaps = palabra;
     palabra = palabra.toLowerCase();
+    //puntos = 10;
+    //document.cookie = "puntos=10".puntos;
 
     function remplazarLetra(letra)
     {
@@ -39,13 +41,15 @@ $(document).ready(function(){
 
 
         if(palabra.includes($letra)){
-            $src = './Content/images/letras/verde/Letter_'+$letra.toUpperCase()+'_green.png'
+            $src = './Content/Images/letras/verde/Letter_'+$letra.toUpperCase()+'_green.png'
             $(this).attr('src', $src);
             $(this).prop('disabled', true);
             transformaGuiones($letra)
 
         } else {
-            $src = './Content/images/letras/rojo/Letter_'+$letra.toUpperCase()+'_red.png'
+            $src = './Content/Images/letras/rojo/Letter_'+$letra.toUpperCase()+'_red.png'
+            //puntos = puntos - 1;
+            //document.cookie = "puntos=".puntos;
             $(this).attr('src', $src);
             $(this).prop('disabled', true);
             fallos++;
@@ -53,47 +57,47 @@ $(document).ready(function(){
 
         switch(fallos) {
             case 0:
-                $url = "./Content/images/muñeco/1-suelo.png"
+                $url = "./Content/Images/muñeco/1-suelo.png"
                 $("#muñeco").attr('src', $url);
                 break;
             case 1:
-                $url = "./Content/images/muñeco/2-poster.png"
+                $url = "./Content/Images/muñeco/2-poster.png"
                 $("#muñeco").attr('src', $url);
                 break;
             case 2:
-                $url = "./Content/images/muñeco/3-soporte.png"
+                $url = "./Content/Images/muñeco/3-soporte.png"
                 $("#muñeco").attr('src', $url);
                 break;
             case 3:
-                $url = "./Content/images/muñeco/4-soga.png"
+                $url = "./Content/Images/muñeco/4-soga.png"
                 $("#muñeco").attr('src', $url);
                 break;
             case 4:
-                $url = "./Content/images/muñeco/5-cabeza.png"
+                $url = "./Content/Images/muñeco/5-cabeza.png"
                 $("#muñeco").attr('src', $url);
                 break;
             case 5:
-                $url = "./Content/images/muñeco/6-cuerpo.png"
+                $url = "./Content/Images/muñeco/6-cuerpo.png"
                 $("#muñeco").attr('src', $url);
                 break;
             case 6:
-                $url = "./Content/images/muñeco/7-brazoIzq.png"
+                $url = "./Content/Images/muñeco/7-brazoIzq.png"
                 $("#muñeco").attr('src', $url);
                 break;
             case 7:
-                $url = "./Content/images/muñeco/8-brazoDer.png"
+                $url = "./Content/Images/muñeco/8-brazoDer.png"
                 $("#muñeco").attr('src', $url);
                 break;
             case 8:
-                $url = "./Content/images/muñeco/9-pieIzq.png"
+                $url = "./Content/Images/muñeco/9-pieIzq.png"
                 $("#muñeco").attr('src', $url);
                 break;
             case 9:
-                $url = "./Content/images/muñeco/10-pieDer.png"
+                $url = "./Content/Images/muñeco/10-pieDer.png"
                 $("#muñeco").attr('src', $url);
                 break;
             case 10:
-                $url = "./Content/images/muñeco/11-conejoCompleto.png"
+                $url = "./Content/Images/muñeco/11-conejoCompleto.png"
                 $("#muñeco").attr('src', $url);
                 $(".letra").prop('disabled', true);
                 alert("El conejo se ha muerto :(.");
