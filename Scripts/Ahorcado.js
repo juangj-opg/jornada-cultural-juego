@@ -31,21 +31,21 @@ $(document).ready(function () {
 
     $(".letra").click(function () {
         //alert($(this).val());
-        $letra = $(this).val().toLowerCase();
-        console.log($letra);
-        if ($letra == "á" || $letra == "é" || $letra == "í" || $letra == "ó" || $letra == "ú")
-            $letra = remplazarLetra($letra);
+        letra = $(this).val().toLowerCase();
+        console.log(letra);
+        if (letra == "á" || letra == "é" || letra == "í" || letra == "ó" || letra == "ú")
+            letra = remplazarLetra(letra);
 
 
-        if (palabra.includes($letra)) {
-            $src = './Content/Images/letras/verde/Letter_' + $letra.toUpperCase() + '_green.png'
-            $(this).attr('src', $src);
+        if (palabra.includes(letra)) {
+            src = './Content/Images/letras/verde/Letter_' + letra.toUpperCase() + '_green.png'
+            $(this).attr('src', src);
             $(this).prop('disabled', true);
-            transformaGuiones($letra)
+            transformaGuiones(letra)
 
         } else {
-            $src = './Content/Images/letras/rojo/Letter_' + $letra.toUpperCase() + '_red.png'
-            $(this).attr('src', $src);
+            src = './Content/Images/letras/rojo/Letter_' + letra.toUpperCase() + '_red.png'
+            $(this).attr('src', src);
             $(this).prop('disabled', true);
             fallos++;
         }
@@ -106,7 +106,6 @@ $(document).ready(function () {
                 $(".letra").prop('disabled', true);
                 document.cookie = "puntos=0";
                 break;
-
         }
 
     });
