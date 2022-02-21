@@ -14,6 +14,7 @@
 </head>
 <body>
 
+    <!-- Cabecera con el título y menú -->
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
         <a class="d-flex align-items-center text-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
@@ -29,19 +30,20 @@
             </a>
             <ul class="dropdown-menu fs-3 text-center">
                 <li><a class="dropdown-item" href="index.php?controller=alumnos&action=puntuaciones">Ver puntuación</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
+                <li> <hr class="dropdown-divider"> </li> <!-- Divisor -->
                 <li><a class="dropdown-item" href="index.php">Salir</a></li>
             </ul>
         </div>
     </header>
 
+    <!-- Contenedor del Ahorcado -->
     <div class="container">
+        <!-- Primer row --> 
         <div class="row">
-
+            <!-- Primera mitad de la página -->
             <div class="col-12 col-md-8 col-lg-6 align-self-end text-center text-dark mb-4 ">
-                <!--resultado-->
+                
+                <!-- Pantalla de Victoría / Derrota -->
                 <div class="card p-5 mb-4 bg-light bg-opacity-70 model invisible">
                     <div class="card-body ">
                         <h1 class="resultado"></h1>
@@ -65,15 +67,19 @@
                         </div>
                     </div>
                 </div>
-                <!--palabra-->
+
+                <!-- Palabra a resolver -->
                 <div class="card p-3 mb-4 bg-light bg-opacity-70">
                     <div class="card-body ">
                         <h2 style="letter-spacing: 7px;" id="palabra"><?php echo $palabra ?> </h2>
                     </div>
                 </div>
             </div>
-            <!--muñeco-->
+
+            <!--Segunda mitad de la página-->
             <div class="col-12 col-md-8 col-lg-6 text-center mb-4 ">
+
+                <!-- Muñeco -->
                 <div class="cuadro card p-3 mb-4 bg-light bg-opacity-50">
                     <div class="card-body">
                         <img id="muñeco" class="muñeco" src="./Content/Images/muñeco/1-suelo.png" alt="">
@@ -81,8 +87,11 @@
                 </div>
             </div>
         </div>
+        <!-- Fin primer row --> 
+
+        <!-- Segundo row -->
         <div class="row justify-content-center">
-            <!--teclado-->
+            <!-- Teclado -->
             <div class="col-12 col-md-8 col-lg-6 text-center mb-4 ">
                 <div class="card p-3 mb-4 bg-light  bg-opacity-50">
                     <div class="card-body">
@@ -123,15 +132,17 @@
                     </div>
                 </div>
             </div>
-            <!--temporizador-->
+
+            <!-- Temporizador -->
             <div class="col-12 col-md-8 col-lg-6 align-self-end text-center mb-4">
                 <div class="cuadro card p-3 mb-4 bg-light bg-opacity-50">
                     <div class="card-body">                                                
                         <h1 class="tiempo">60:00</h1>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <!-- Fin segundo row -->
     </div>
 </body>
 
