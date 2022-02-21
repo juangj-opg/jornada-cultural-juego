@@ -50,15 +50,15 @@
                 <div class="card p-5 mb-4 bg-light bg-opacity-70 model invisible">
                     <div class="card-body ">
                         <h1 class="resultado"></h1>
-                        <div class="row">
-                            <div class="col">
+                        <div class="row align-items-center">
+                            <div class="col-12">
                                 <form method="get" action="index.php?controller=monumentos&action=ruleta">
                                     <button type="submit" class="btn btn-primary me-2 ">Jugar de nuevo</button>
                                 </form>
                             </div>
                             <div class="col">
                                 <form method="get" action="index.php">
-                                    <button type="submit" class="btn btn-primary me-2 ">Puntuaciónes</button>
+                                    <button type="submit" class="btn btn-primary me-2 ">Puntuaciones</button>
                                 </form>
                             </div>
                             <div class="col">
@@ -66,7 +66,6 @@
                                     <button type="submit" class="btn btn-dark me-2 ">Salir</button>
                                 </form>
                             </div>
-
                         </div>
                     </div>
                 </div>
