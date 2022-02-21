@@ -24,15 +24,12 @@ $(document).ready(function () {
         for (var i = 0; i < tildes.length; i++) {
             letra = letra.replace(tildes[i], chars[i]);
         }
-        console.log("prueba")
-        console.log(letra);
         return letra;
     }
 
     $(".letra").click(function () {
         //alert($(this).val());
         letra = $(this).val().toLowerCase();
-        console.log(letra);
         if (letra == "á" || letra == "é" || letra == "í" || letra == "ó" || letra == "ú")
             letra = remplazarLetra(letra);
 
@@ -42,6 +39,13 @@ $(document).ready(function () {
             $(this).attr('src', src);
             $(this).prop('disabled', true);
             transformaGuiones(letra)
+            palabra_act = $("#palabra").text();
+            if(comprobarPalabra(palabra_act, palabraCaps)){
+                $(".letra").prop('disabled', true);
+                // Cambiarlo por el div de victoria
+                alert("Has ganado");
+            }
+            
 
         } else {
             src = './Content/Images/letras/rojo/Letter_' + letra.toUpperCase() + '_red.png'
@@ -105,6 +109,8 @@ $(document).ready(function () {
                 $("#muñeco").attr('src', $url);
                 $(".letra").prop('disabled', true);
                 document.cookie = "puntos=0";
+                // Poner aquí el div de cuando pierdes
+
                 break;
         }
 
@@ -117,7 +123,6 @@ $(document).ready(function () {
     function transformaGuiones(letra) {
         var palabra_actual = $("#palabra").text()
         for (let i = 0; i < palabra.length; i++) {
-            console.log(palabraCaps.substr(i, 1));
             // Cambiador de tildes por letra normales
             if (palabra.substr(i, 1) == "á") palabra = palabra.replaceAt(i, "a");
             if (palabra.substr(i, 1) == "é") palabra = palabra.replaceAt(i, "e");
@@ -126,7 +131,6 @@ $(document).ready(function () {
             if (palabra.substr(i, 1) == "ú") palabra = palabra.replaceAt(i, "u");
 
             if (palabra.substr(i, 1) == letra) {
-                console.log("Coincide");
                 palabra_actual = palabra_actual.replaceAt(i, palabraCaps.substr(i, 1));
                 $("#palabra").text(palabra_actual)
             }
@@ -138,5 +142,19 @@ $(document).ready(function () {
             "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
         ));
         return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+    function comprobarPalabra(palabra_act, palabraCaps){
+        palabra_act = palabra_act.replace(/\s/g, '');
+        palabraCaps = palabraCaps.replace(/\s/g, ''); 
+        if(palabra_act == palabraCaps) 
+        {
+            console.log("Ta bien")
+            return true
+        }
+        else {
+            console.log("Aun no");
+            return false;
+        }
     }
 });
