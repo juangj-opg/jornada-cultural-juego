@@ -105,7 +105,6 @@ $(document).ready(function () {
                 $("#muñeco").attr('src', $url);
                 $(".letra").prop('disabled', true);
                 document.cookie = "puntos=0";
-                alert("El conejo se ha muerto :(.");
                 break;
 
         }

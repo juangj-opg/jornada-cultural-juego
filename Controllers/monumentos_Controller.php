@@ -36,6 +36,8 @@ function ahorcado(){
     $nombreMonumento = $monumento['monumento'];
     setcookie("monumento", $nombreMonumento);
 
+    $resultado = 
+
     include "Views/monumentos_Ahorcado.php";
 }
 

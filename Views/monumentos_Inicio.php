@@ -15,7 +15,6 @@
 <body>
 
     <body>
-
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-dark">
             <a class="d-flex align-items-center text-dark text-decoration-none">
                 <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
@@ -29,59 +28,57 @@
                 <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="https://cdn-icons-png.flaticon.com/512/802/802338.png" alt="mdo" width="52" height="52" class="rounded-circle">
                 </a>
-                <<<<<<< HEAD <ul class="dropdown-menu fs-3 text-center">
+                <ul class="dropdown-menu fs-3 text-center">
                     <li><a class="dropdown-item" href="index.php?controller=alumnos&action=puntuaciones">Ver puntuación</a></li>
-                    </ul>
+                    <li>
+
+                </ul>
             </div>
         </header>
-        <!-- Formulario Login Kid-->
 
-        <!-- BANDERA -->
+
+        <!-- Bandera-->
 
         <div class="row me-0">
             <div class="col-md-6">
                 <div class="login-form">
                     <form action="" method="post">
                         <div class="form-group">
-                            <input type="text" name="nombre" style="background-color: white" pattern="[a-Z]" class="form-control text-center" placeholder="Introduce tu nombre" required="required">
+                            <input type="text" name="nombre"  pattern="[a-Z]" class="form-control text-center bg-light" placeholder="Introduce tu nombre" required="required">
                         </div>
                         <div class="form-group">
-                            <select name="clase" style="background-color: white" class="form-control text-center" placeholder="Clase..." required="required">
+                            <select name="clase" class="form-control text-center bg-light" placeholder="Clase..." required="required">
                                 <option value="vacio" selected disabled> Elige tu clase </option>
                                 <?php foreach ($clases as $clase) : ?>
                                     <option value="<?php echo $clase['id']; ?>"><?php echo $clase['clase']; ?></option>
                                 <?php endforeach; ?>
                             </select>
                             <br>
-                            <small id="emailHelp"><br>* ¡Hay un ranking con las mejores clases! 🥇🥈🥉</small>
+                            <small><br>* ¡Hay un ranking con las mejores clases! 🥇🥈🥉</small>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button type="submit" id="jugar" class="btn btn-danger">JUGAR</button>
+                            <button type="submit" id="jugar" class="btn btn-success">JUGAR</button>
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">
-                            <button type="button" id="instrucciones" class="btn btn-primary">INSTRUCCIONES</button>
+                            <button type="button" id="instrucciones" class="btn btn-light">INSTRUCCIONES</button>
                         </div>
                     </form>
                 </div>
             </div>
-
-            <!-- SIMPLIFICAR EN IMG CLASICO? -->
-
-
-            <div class="col-md-5 center-block cajawapa" style="display: none;">
+            <!--Instrucciones-->
+            <div class="col-md-5 center-block cajawapa bg-success" style="display: none;">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#5a6165;"></rect><text x="50%" y="50%" fill="#777" dy=".3em" data-darkreader-inline-fill="" style="--darkreader-inline-fill:#9d9488;">140x140</text>
                     <image height="140" width="140" xlink:href="https://amaga.es/image/cache/catalog/productos/banderas%20y%20mastiles/banderas%20autonomicas/andalucia-800x800.jpg" clip-path="url(#myCircle)" />
-
                 </svg>
+                <span class="ms-5"><b>¡El mítico ahorcado... en andaluz!</b></span>
 
                 <br>
                 <br>
-                <div class="guia">
-                    <p><b>¡El mítico ahorcado... en andaluz!</b></p>
+                <div class="guia text-light">
                     <p>¡Gira la ruleta!</p>
-                    <p>Debes adivinar un monumento de esa ciudad andaluza...</p>
+                    <p>Debes adivinar un monumento de esa provincia andaluza...</p>
                     <p>¡Pero deberás de hacerlo letra a letra!</p>
                     <p>Clickea en una letra para intentar acertarlo</p>
                 </div>
@@ -93,25 +90,10 @@
                 $(".cajawapa").toggle('slow');
             });
         </script>
-
-        <!-- <div class = "col-lg-1">
-        <div>Instrucciones</div>
-        </div> -->
-
-        </div>
-
-
-
-
-
-
-        <!-- Select con PHP -->
-
-
         <style>
             body {
                 padding: 0px;
-                background-image: url("https://www.visitasevilla.es/sites/default/files/extended_page/img_header/plaza_espana_sevilla_0.jpg");
+                background-image: url("https://w.wallhaven.cc/full/mp/wallhaven-mppr9k.jpg");
                 background-repeat: no-repeat;
                 background-position: center;
                 background-attachment: fixed;
@@ -146,7 +128,6 @@
             }
 
             .login-form {
-                background-color: greenyellow;
                 padding: 30px;
             }
 
@@ -164,7 +145,6 @@
 
             small {
                 font-size: 18px;
-                color: red;
                 font-style: bold;
             }
 
