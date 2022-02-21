@@ -156,15 +156,15 @@ $(document).ready(function () {
     }
 
     function temporizador(){
-        let h1 = document.querySelector("h1");
+        let h1 = document.querySelector(".tiempo");
         let centesimas = 0;
-        let segundos = 15;
+        let segundos = 60;
 
         function run() {
             if ((centesimas == 0) && (segundos == 0)) {
                
             } else {
-                if ((centesimas == 10) && (segundos == 10)){
+                if ((centesimas == 20) && (segundos == 20)){
                     h1.style.color = 'red';
                 }
                 
