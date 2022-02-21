@@ -72,7 +72,7 @@
                             </div>
                             <div class="col">
                                 <form method="get" action="index.php">
-                                    <button type="submit" class="btn btn-primary me-2 ">Ver puntuación</button>
+                                    <button type="submit" class="btn btn-primary me-2 ">Puntuaciónes</button>
                                 </form>
                             </div>
                             <div class="col">
