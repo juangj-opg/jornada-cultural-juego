@@ -45,7 +45,12 @@ $(document).ready(function () {
                 $(".letra").prop('disabled', true);
                 $(".resultado").text("¡HAS GANADO!");
                 clearInterval(intervalo);
+<<<<<<< HEAD
                 $(".model").removeClass("invisible").addClass("visible").css("background-color", "rgba(8, 122, 14, 0.75)");
+=======
+                clearInterval(redCountdown);
+                $(".model").removeClass("invisible").addClass("visible");
+>>>>>>> 633e1e49e5f4343db55ea868ffe60164fec7e6a2
             }
 
         } else {
@@ -123,7 +128,12 @@ $(document).ready(function () {
                 document.cookie = "puntos=0";
                 $(".resultado").text("¡HAS PERDIDO!");
                 clearInterval(intervalo);
+<<<<<<< HEAD
                 $(".model").removeClass("invisible").addClass("visible").css("background-color", "rgba(146, 44, 44, 0.75)");
+=======
+                clearInterval(redCountdown);
+                $(".model").removeClass("invisible").addClass("visible");
+>>>>>>> 633e1e49e5f4343db55ea868ffe60164fec7e6a2
                 break;
         }
     });
@@ -231,10 +241,9 @@ $(document).ready(function () {
                 $(".vidas").text("0");
                 $(".model").removeClass("invisible").addClass("visible");
             } else {
-                if (segundos == 20){
+                if (segundos < 20){
                     h1.style.color = 'red';
-                }
-                
+                }                
                 if (centesimas == 0) {
                     --segundos;
                     centesimas = 99;
@@ -249,7 +258,19 @@ $(document).ready(function () {
                 }
             }
         }
+
+        // Prueba parpadeos
+        function redCountdown () {
+            if (segundos < 10){
+                $(h1).fadeOut("fast");
+                $(h1).fadeIn("medium");
+            }  
+        }
+
+
+
         intervalo = setInterval(run, 10);
+        intervaloRed = setInterval(redCountdown, 10)
     }
     temporizador();
 });
