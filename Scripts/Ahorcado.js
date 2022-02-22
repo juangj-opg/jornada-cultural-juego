@@ -218,7 +218,7 @@ $(document).ready(function () {
     function temporizador(){
         let h1 = document.querySelector(".tiempo");
         let centesimas = 0;
-        let segundos = 5;
+        let segundos = 60;
 
         function run() {
             if ((centesimas == 0) && (segundos == 0)) {
@@ -229,7 +229,7 @@ $(document).ready(function () {
                 document.cookie = "puntos=0";
                 $(".resultado").text("¡HAS PERDIDO!");
                 $(".vidas").text("0");
-                $(".model").removeClass("invisible").addClass("visible");
+                $(".model").removeClass("invisible").addClass("visible").css("background-color", "rgba(146, 44, 44, 0.75)");
             } else {
                 if (segundos < 20){
                     h1.style.color = 'red';
