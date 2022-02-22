@@ -45,6 +45,7 @@ $(document).ready(function () {
                 $(".letra").prop('disabled', true);
                 $(".resultado").text("¡HAS GANADO!");
                 clearInterval(intervalo);
+                clearInterval(redCountdown);
                 $(".model").removeClass("invisible").addClass("visible");
             }
 
@@ -123,6 +124,7 @@ $(document).ready(function () {
                 document.cookie = "puntos=0";
                 $(".resultado").text("¡HAS PERDIDO!");
                 clearInterval(intervalo);
+                clearInterval(redCountdown);
                 $(".model").removeClass("invisible").addClass("visible");
                 break;
         }
@@ -231,10 +233,9 @@ $(document).ready(function () {
                 $(".vidas").text("0");
                 $(".model").removeClass("invisible").addClass("visible");
             } else {
-                if (segundos == 20){
+                if (segundos < 20){
                     h1.style.color = 'red';
-                }
-                
+                }                
                 if (centesimas == 0) {
                     --segundos;
                     centesimas = 99;
@@ -249,7 +250,19 @@ $(document).ready(function () {
                 }
             }
         }
+
+        // Prueba parpadeos
+        function redCountdown () {
+            if (segundos < 10){
+                $(h1).fadeOut("fast");
+                $(h1).fadeIn("medium");
+            }  
+        }
+
+
+
         intervalo = setInterval(run, 10);
+        intervaloRed = setInterval(redCountdown, 10)
     }
     temporizador();
 });
