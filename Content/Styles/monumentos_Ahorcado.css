@@ -21,6 +21,7 @@ body {
     width: 180px;
     color: white;
     border: 5px solid rgb(255, 255, 255);
+    border-radius:30px;
 }
 
 button {
@@ -39,5 +40,10 @@ button {
     height: 40px;
     text-align: center;
     padding-top: 1.5%;
+}
+
+.cuadroDiv {
+    border: 5px solid rgb(255, 255, 255);
+    border-radius:30px;
 }
 

@@ -45,7 +45,7 @@ $(document).ready(function () {
                 $(".letra").prop('disabled', true);
                 $(".resultado").text("¡HAS GANADO!");
                 clearInterval(intervalo);
-                $(".model").removeClass("invisible").addClass("visible");
+                $(".model").removeClass("invisible").addClass("visible").css("background-color", "rgba(8, 122, 14, 0.75)");
             }
 
         } else {
@@ -123,7 +123,7 @@ $(document).ready(function () {
                 document.cookie = "puntos=0";
                 $(".resultado").text("¡HAS PERDIDO!");
                 clearInterval(intervalo);
-                $(".model").removeClass("invisible").addClass("visible");
+                $(".model").removeClass("invisible").addClass("visible").css("background-color", "rgba(146, 44, 44, 0.75)");
                 break;
         }
     });

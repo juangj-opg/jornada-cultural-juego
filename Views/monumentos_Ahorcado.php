@@ -47,11 +47,11 @@
             <div class="col-12 col-md-8 col-lg-6 align-self-end text-center text-dark mb-4 ">
 
                 <!-- Pantalla de Victoría / Derrota -->
-                <div class="card p-5 mb-4 bg-light bg-opacity-70 model invisible">
+                <div class="card p-5 mb-4 model invisible cuadroDiv">
                     <div class="card-body ">
                         <div class = "row mb-5">
                             <div class = "col-8">
-                                <h1 class="resultado"></h1>
+                                <h1 class="resultado text-light"></h1>
                             </div>
                             <div class = "col-4">
                                 <input class="foto" type="image" src="./Content/Images/iconoFoto.png" value="foto" />
@@ -85,7 +85,7 @@
                 </div>
 
                 <!-- Palabra a resolver -->
-                <div class="card p-3 mb-4 bg-light bg-opacity-70">
+                <div class="card p-3 mb-4 bg-light cuadroDiv">
                     <div class="card-body ">
                         <h2 style="letter-spacing: 7px;" id="palabra"><?php echo $palabra ?> </h2>
                     </div>
@@ -155,7 +155,7 @@
             <!-- Temporizador -->
             <div class="col-12 col-md-8 col-lg-6 align-self-center mb-4">
                 <div class="row justify-content-center">                    
-                    <div class="cuadroTiempo card p-3 mb-4 bg-dark" style="border-radius:30px">
+                    <div class="cuadroTiempo card p-3 mb-4 bg-dark">
                         <div class="card-body ">
                             <h1 class="tiempo">60:00</h1>
                         </div>
