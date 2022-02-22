@@ -45,12 +45,7 @@ $(document).ready(function () {
                 $(".letra").prop('disabled', true);
                 $(".resultado").text("¡HAS GANADO!");
                 clearInterval(intervalo);
-<<<<<<< HEAD
                 $(".model").removeClass("invisible").addClass("visible").css("background-color", "rgba(8, 122, 14, 0.75)");
-=======
-                clearInterval(redCountdown);
-                $(".model").removeClass("invisible").addClass("visible");
->>>>>>> 633e1e49e5f4343db55ea868ffe60164fec7e6a2
             }
 
         } else {
@@ -128,12 +123,7 @@ $(document).ready(function () {
                 document.cookie = "puntos=0";
                 $(".resultado").text("¡HAS PERDIDO!");
                 clearInterval(intervalo);
-<<<<<<< HEAD
                 $(".model").removeClass("invisible").addClass("visible").css("background-color", "rgba(146, 44, 44, 0.75)");
-=======
-                clearInterval(redCountdown);
-                $(".model").removeClass("invisible").addClass("visible");
->>>>>>> 633e1e49e5f4343db55ea868ffe60164fec7e6a2
                 break;
         }
     });
@@ -228,7 +218,7 @@ $(document).ready(function () {
     function temporizador(){
         let h1 = document.querySelector(".tiempo");
         let centesimas = 0;
-        let segundos = 60;
+        let segundos = 5;
 
         function run() {
             if ((centesimas == 0) && (segundos == 0)) {
