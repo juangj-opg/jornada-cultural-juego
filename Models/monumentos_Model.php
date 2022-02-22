@@ -35,7 +35,7 @@
     function getMonumento($idMonumento) {
         try {
             $conn = getConnection();
-            $consulta=$conn->prepare("SELECT * FROM monumentos WHERE idMonumentos = ?");
+            $consulta=$conn->prepare("SELECT m.idMonumentos, p.provincia, m.monumento, m.imagen FROM monumentos m, provincias p WHERE m.idProvincia=p.id AND idMonumentos = ?");
             $consulta->bindParam(1, $idMonumento);
             $consulta->execute();
             $monumentos = $consulta->fetch(\PDO::FETCH_ASSOC);
