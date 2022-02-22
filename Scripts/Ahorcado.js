@@ -54,6 +54,7 @@ $(document).ready(function () {
             $(this).attr('src', src);
             $(this).prop('disabled', true);
             fallos++;
+            $(".vidas").text(getCookie('puntos')-1);
         }
         
         /* 
@@ -227,9 +228,10 @@ $(document).ready(function () {
                 $(".letra").prop('disabled', true);
                 document.cookie = "puntos=0";
                 $(".resultado").text("¡HAS PERDIDO!");
+                $(".vidas").text("0");
                 $(".model").removeClass("invisible").addClass("visible");
             } else {
-                if ((centesimas == 20) && (segundos == 20)){
+                if (segundos == 20){
                     h1.style.color = 'red';
                 }
                 
