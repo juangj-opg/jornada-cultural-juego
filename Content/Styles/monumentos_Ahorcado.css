@@ -27,6 +27,10 @@ button {
     width: 100%;
 }
 
+.foto {
+    width: 50px;
+}
+
 .vidas {
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coraz%C3%B3n.svg/640px-Coraz%C3%B3n.svg.png");
     background-repeat: no-repeat;

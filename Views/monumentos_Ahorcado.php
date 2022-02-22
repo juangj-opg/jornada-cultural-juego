@@ -49,7 +49,15 @@
                 <!-- Pantalla de Victoría / Derrota -->
                 <div class="card p-5 mb-4 bg-light bg-opacity-70 model invisible">
                     <div class="card-body ">
-                        <h1 class="resultado"></h1>
+                        <div class = "row mb-5">
+                            <div class = "col-8">
+                                <h1 class="resultado"></h1>
+                            </div>
+                            <div class = "col-4">
+                                <input class="foto" type="image" src="./Content/Images/iconoFoto.png" value="foto" />
+                            </div>
+                        </div>
+                       
                         <div class="row align-items-center">
                             <div class="col">
                                 <form method="get" action="index.php?controller=monumentos&action=ruleta">
