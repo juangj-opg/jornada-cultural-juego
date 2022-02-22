@@ -90,6 +90,9 @@
                 <!-- Muñeco -->
                 <div class="cuadro card p-3 mb-4 bg-light bg-opacity-50">
                     <div class="card-body">
+                        <div class="vidas">
+                            <p class="fw-bold vida">10</p>
+                        </div>
                         <img id="muñeco" class="muñeco" src="./Content/Images/muñeco/1-suelo.png" alt="">
                     </div>
                 </div>
