@@ -49,15 +49,29 @@
                 <!-- Pantalla de Victoría / Derrota -->
                 <div class="card p-5 mb-4 model invisible cuadroDiv">
                     <div class="card-body ">
-                        <div class = "row mb-5">
-                            <div class = "col-8">
+                        <div class="row mb-5">
+                            <div class="col-8">
                                 <h1 class="resultado text-light"></h1>
                             </div>
-                            <div class = "col-4">
-                                <input class="foto" type="image" src="./Content/Images/iconoFoto.png" value="foto" />
+                            <div class="col-4">
+                                <input class="foto" type="image" src="./Content/Images/iconoFoto.png" value="foto" data-bs-toggle="modal" data-bs-target="#staticBackdrop"/>
                             </div>
                         </div>
-                       
+                        <!-- MODAL CON IMAGEN MONUMENTO -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel"><?php echo ($monumento["monumento"]." - ". $monumento["provincia"]); ?></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="<?php echo $monumento["imagen"]; ?>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -->
                         <div class="row align-items-center">
                             <div class="col">
                                 <form method="get" action="index.php?controller=monumentos&action=ruleta">
@@ -154,7 +168,7 @@
 
             <!-- Temporizador -->
             <div class="col-12 col-md-8 col-lg-6 align-self-center mb-4">
-                <div class="row justify-content-center">                    
+                <div class="row justify-content-center">
                     <div class="cuadroTiempo card p-3 mb-4 bg-dark">
                         <div class="card-body ">
                             <h1 class="tiempo">60:00</h1>
