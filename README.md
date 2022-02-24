@@ -1,4 +1,4 @@
-# Jornadas Culturales 2022 · "El Conejo Ahorcado"
+# Jornadas Culturales 2022 · El Conejo Ahorcado
 
 ## ÍNDICE
 
