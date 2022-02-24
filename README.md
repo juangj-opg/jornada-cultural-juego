@@ -9,8 +9,8 @@
 <a name="introduccion"></a>						     		
 ## 1. Instrucciones 	
 
-ACCESO A LA APLICACIÓN DESPLEGADA: https://ahorcado-andaluz.000webhostapp.com/
-EN CASO DE USAR LOCAL: Desde el "index.php"
+* ACCESO A LA APLICACIÓN DESPLEGADA: https://ahorcado-andaluz.000webhostapp.com/
+* EN CASO DE USAR EN LOCAL: Desde el "index.php"
 
 Este proyecto escolar consiste en un juego desarrollado desde cero, imitando al juego del ahorcado pero con temática de monumentos andaluces. 
 
