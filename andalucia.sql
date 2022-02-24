@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 24-02-2022 a las 09:36:05
+-- Tiempo de generación: 24-02-2022 a las 09:56:02
 -- Versión del servidor: 8.0.28-0ubuntu0.20.04.3
 -- Versión de PHP: 7.4.3
 
@@ -73,7 +73,7 @@ INSERT INTO `monumentos` (`idMonumentos`, `idProvincia`, `monumento`, `imagen`) 
 (16, 7, 'Catedral de Cádiz', 'https://catedraldecadiz.com/wp-content/uploads/exterior-fachada-1920px-catedral-cadiz.jpg'),
 (17, 7, 'Castillo de Santa Catalina', 'https://owaytours.com/wp-content/uploads/2020/08/precios-del-castillo-de-santa-catalina.jpg'),
 (18, 7, 'Gran Teatro Falla', 'https://www.cadiztur.com/wp-content/uploads/2020/05/theatre-falla-cadix.jpg'),
-(19, 2, 'Palacio de las Dueñas', 'https://guias-viajar.com/wp-content/uploads/2017/12/sevilla-palacio-due%C3%B1as-016.jpg'),
+(19, 2, 'La Giralda', 'https://www.mercerhoteles.com/photo/blog/45/1/sevilla-a-los-pies-de-la-giralda.jpg?w=1440'),
 (20, 2, 'Palacio de San Telmo', 'https://www.visitasevilla.es/sites/default/files/place/img_header/palacio_san_telmo.jpg'),
 (21, 2, 'Huevo de Colón', 'https://static1-sevilla.abc.es/media/sevilla/2020/06/03/s/huevo-colon-report-kBvD--1200x630@abc.jpg'),
 (22, 4, 'Catedral de la Merced', 'https://astelus.com/wp-content/viajes/la-catedral-de-huelva-400x2681.jpg'),
@@ -156,7 +156,8 @@ INSERT INTO `puntuaciones` (`id`, `clase`, `puntuacion`) VALUES
 -- Indices de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idClase` (`idClase`);
 
 --
 -- Indices de la tabla `monumentos`
@@ -175,7 +176,8 @@ ALTER TABLE `provincias`
 -- Indices de la tabla `puntuaciones`
 --
 ALTER TABLE `puntuaciones`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -208,6 +210,12 @@ ALTER TABLE `puntuaciones`
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `alumnos`
+--
+ALTER TABLE `alumnos`
+  ADD CONSTRAINT `alumnos_ibfk_1` FOREIGN KEY (`idClase`) REFERENCES `puntuaciones` (`id`);
 
 --
 -- Filtros para la tabla `monumentos`
