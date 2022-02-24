@@ -30,12 +30,16 @@ El código contiene:
 - PHP
 - MySQL, uso en la interfaz gráfica de phpMyAdmin
 
-La arquitectura del proyecto sigue el MVC; Modelo-Vista-Controlador así como un código limpio y optimizado tanto en el back-end como en las 4 pantallas de juego.
+La arquitectura del proyecto sigue el MVC; Modelo-Vista-Controlador.
+Se ha conseguido un código limpio y optimizado tanto en el back-end como en las 4 pantallas de juego.
+
+Los colores han sido corregidos para estar acordes a la temática de la región andaluza.
 
 <a name="capturas"></a>		
 ## 3. Capturas del videojuego
 
 ![Captura1](https://i.imgur.com/IRcYvwK.png)
-![Captura2](https://i.imgur.com/Y6inKYV.png)
+![Captura2](https://i.imgur.com/tz5Ti7h.png)
+![Captura3](https://i.imgur.com/Y6inKYV.png)
 
 
