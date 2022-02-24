@@ -30,7 +30,7 @@ El código contiene:
 - PHP
 - MySQL, uso en la interfaz gráfica de phpMyAdmin
 
-La arquitectura del proyecto sigue el MVC; Modelo-Vista-Controlador así como un código limpio y optimizado.
+La arquitectura del proyecto sigue el MVC; Modelo-Vista-Controlador así como un código limpio y optimizado tanto en el back-end como en las 4 pantallas de juego.
 
 <a name="capturas"></a>		
 ## 3. Capturas del videojuego
