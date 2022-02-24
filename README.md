@@ -11,9 +11,9 @@
 ## 1. Instrucciones 	
 
 Este proyecto escolar consiste en un juego desarrollado desde cero, imitando al juego del ahorcado pero con temática de monumentos andaluces. 
-Deberás de indicar tu nombre y clase, girar la ruleta... ¡Y adivinar el monumento! 
-Dispones de 10 oportunidades en 1 minuto
 
+* Deberás de indicar tu nombre y clase, girar la ruleta... ¡Y adivinar el monumento! 
+* Dispones de 10 oportunidades en 1 minuto
 * Puedes visualizar a los mejores jugadores en nuestro ránking 🏅
 
 La aplicación es ejecutable en navegador web con Javascript activado, no hay necesidad de instalación de software ni configuración extra.
