@@ -35,7 +35,7 @@ function getClase($idClase) {
 function getAlumnos() {
     try {
         $conn = getConnection();
-        $consulta = $conn->prepare("SELECT a.nombre, p.clase, a.puntuaciones FROM alumnos a, puntuaciones p WHERE a.idClase = p.id");
+        $consulta = $conn->prepare("SELECT a.nombre, p.clase, a.puntuaciones FROM alumnos a, puntuaciones p WHERE a.idClase = p.id ORDER BY puntuaciones DESC");
         $consulta->execute();
         $clases = $consulta->fetchAll();
         return $clases;
