@@ -19,7 +19,7 @@ La aplicación es ejecutable en navegador web con Javascript activado, no hay ne
 Se ejecuta desde el inicio: index.php
 
 <a name="tecnologias"></a>		
-## 2. Tecnologías
+## 2. Tecnologías utilizadas
 
 Las tecnologías utilizadas en este proyecto han sido bastante variadas, haciendo inciso en todas las cursadas durante el último año de clase.
 El código contiene:
