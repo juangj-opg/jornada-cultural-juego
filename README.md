@@ -24,11 +24,11 @@ Se ejecuta desde el inicio: index.php
 Las tecnologías utilizadas en este proyecto han sido bastante variadas, haciendo inciso en todas las cursadas durante el último año de clase.
 El código contiene:
 
-· HTML
-· CSS, con el framework Bootstrap
-· Javascript, con la librería jQuery
-· PHP
-· MySQL, uso en la interfaz gráfica de phpMyAdmin
+- HTML
+- CSS, con el framework Bootstrap
+- Javascript, con la librería jQuery
+- PHP
+- MySQL, uso en la interfaz gráfica de phpMyAdmin
 
 La arquitectura del proyecto sigue el MVC; Modelo-Vista-Controlador así como un código limpio y optimizado.
 
