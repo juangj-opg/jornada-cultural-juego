@@ -213,7 +213,7 @@ $(document).ready(function () {
 
     /* Función temporizador()
     * - Esta función es un temporizador de 1 minuto, que va dismuyendo.
-    * - *NO IMPLEMENTADO* En caso de llegar a 0:00, mostrará el mensaje de que has perdido. 
+    * - En caso de llegar a 0:00, mostrará el mensaje de que has perdido. 
     */
     function temporizador(){
         let h1 = document.querySelector(".tiempo");
