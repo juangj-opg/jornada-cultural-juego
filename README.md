@@ -1,4 +1,4 @@
-# "Proyecto El Conejo Ahorcado" Jornadas Culturales 2022 · IES Polígono Sur
+# Jornadas Culturales 2022 · "El Conejo Ahorcado"
 
 ## ÍNDICE
 
